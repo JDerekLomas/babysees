@@ -176,6 +176,7 @@
           <textarea class="export-area" id="exportArea" readonly></textarea>
         </div>
         <button class="copy-btn" id="copyBtn">Copy to Clipboard</button>
+        <button class="copy-btn" id="clearBtn" style="background:#522;color:#c88;">Clear All Feedback</button>
       </div>
     </div>
 
@@ -328,6 +329,15 @@
       document.execCommand('copy');
       document.getElementById('copyBtn').textContent = 'Copied!';
       setTimeout(() => document.getElementById('copyBtn').textContent = 'Copy to Clipboard', 1500);
+    };
+
+    document.getElementById('clearBtn').onclick = () => {
+      if (confirm('Clear all feedback for this book?')) {
+        pages.forEach((p, i) => localStorage.removeItem(getFeedbackKey(i)));
+        updateDots();
+        updateExport();
+        loadFeedback();
+      }
     };
 
     function updatePage() {
