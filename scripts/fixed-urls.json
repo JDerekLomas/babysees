@@ -1,0 +1,149 @@
+[
+  {
+    "word": "Lightning",
+    "category": "Nature",
+    "status": "search_result",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg/960px-Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg",
+    "alternatives": [
+      {
+        "title": "File:Summer lightning storm over the City of Kamloops, BC (19999745418).jpg",
+        "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819999745418%29.jpg/960px-Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819999745418%29.jpg",
+        "license": "CC BY-SA 2.0"
+      },
+      {
+        "title": "File:Lightning Thunder Storm (79288129).jpeg",
+        "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lightning_Thunder_Storm_%2879288129%29.jpeg/960px-Lightning_Thunder_Storm_%2879288129%29.jpeg",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "source": "search"
+  },
+  {
+    "word": "Dragon",
+    "category": "Mythology",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/960px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Phoenix",
+    "category": "Mythology",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Phoenix_detail_from_Aberdeen_Bestiary.jpg/884px-Phoenix_detail_from_Aberdeen_Bestiary.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Unicorn",
+    "category": "Mythology",
+    "status": "failed"
+  },
+  {
+    "word": "Griffin",
+    "category": "Mythology",
+    "status": "failed"
+  },
+  {
+    "word": "Chimera",
+    "category": "Mythology",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chimera_d%27arezzo%2C_fi%2C_04.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_04.JPG",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Pegasus",
+    "category": "Mythology",
+    "status": "failed"
+  },
+  {
+    "word": "Leviathan",
+    "category": "Mythology",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/960px-Destruction_of_Leviathan.png",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Snowflake",
+    "category": "Microscopic",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SnowflakesWilsonBentley.jpg/960px-SnowflakesWilsonBentley.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Virus",
+    "category": "Microscopic",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Phage.jpg/960px-Phage.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Bacteria",
+    "category": "Microscopic",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/960px-E._coli_Bacteria_%287316101966%29.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Mosaic",
+    "category": "Art",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ravenna_BW_4.JPG/960px-Ravenna_BW_4.JPG",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Stained Glass",
+    "category": "Art",
+    "status": "search_result",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stained_glass_-_Kutna_Hora.jpg/960px-Stained_glass_-_Kutna_Hora.jpg",
+    "alternatives": [
+      {
+        "title": "File:St Vitus Cathedral - Stained glass (retouch).jpg",
+        "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/St_Vitus_Cathedral_-_Stained_glass_%28retouch%29.jpg/960px-St_Vitus_Cathedral_-_Stained_glass_%28retouch%29.jpg",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "File:Canterbury Cathedral Trinity Chapel Stained Glass, Kent, UK - Diliff.jpg",
+        "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Canterbury_Cathedral_Trinity_Chapel_Stained_Glass%2C_Kent%2C_UK_-_Diliff.jpg/960px-Canterbury_Cathedral_Trinity_Chapel_Stained_Glass%2C_Kent%2C_UK_-_Diliff.jpg",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "source": "search"
+  },
+  {
+    "word": "Sculpture",
+    "category": "Art",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%27David%27_by_Michelangelo_Fir_JBU005.jpg/960px-%27David%27_by_Michelangelo_Fir_JBU005.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Tapestry",
+    "category": "Art",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg/960px-Bayeux_Tapestry_scene57_Harold_death.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Alchemy",
+    "category": "Alchemical",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg/960px-Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Macrocosm",
+    "category": "Alchemical",
+    "status": "failed"
+  },
+  {
+    "word": "Rebis",
+    "category": "Alchemical",
+    "status": "fixed",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Rebis.png",
+    "source": "filename_lookup"
+  },
+  {
+    "word": "Labyrinth",
+    "category": "Alchemical",
+    "status": "failed"
+  }
+]

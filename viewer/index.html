@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BabySees: Layout Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; color: white; font-family: system-ui, sans-serif; min-height: 100vh; }
+    .controls { position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); padding: 0.75rem 1rem; display: flex; gap: 1rem; align-items: center; z-index: 100; flex-wrap: wrap; border-bottom: 1px solid #333; }
+    .controls label { font-size: 0.7rem; color: #666; }
+    .controls select, .controls button { padding: 0.4rem 0.75rem; border-radius: 4px; border: 1px solid #444; background: #222; color: white; cursor: pointer; font-size: 0.85rem; }
+    .controls button:hover { background: #333; }
+    .nav-buttons { display: flex; gap: 0.5rem; margin-left: auto; }
+    .page-indicator { color: #666; font-size: 0.85rem; }
+    .category-tag { font-size: 0.7rem; background: #333; padding: 0.2rem 0.5rem; border-radius: 3px; color: #888; }
+    .main-container { display: flex; padding-top: 60px; min-height: 100vh; }
+    .viewer { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; }
+    .page { width: min(70vw, 600px); aspect-ratio: 1; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); background: #111; }
+    .page-image { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .page-image.broken::after { content: "Image failed to load"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #222; color: #666; font-size: 0.9rem; }
+    .page-word { position: absolute; text-transform: uppercase; letter-spacing: 0.1em; user-select: none; }
+    .feedback-buttons { display: flex; gap: 1rem; margin-top: 1rem; align-items: center; }
+    .feedback-btn { padding: 0.75rem 1.5rem; border-radius: 8px; border: 2px solid #444; background: #222; color: white; cursor: pointer; font-size: 1.5rem; transition: all 0.15s; }
+    .feedback-btn:hover { transform: scale(1.1); }
+    .feedback-btn.thumbs-up:hover, .feedback-btn.thumbs-up.active { border-color: #22c55e; background: rgba(34, 197, 94, 0.2); }
+    .feedback-btn.thumbs-down:hover, .feedback-btn.thumbs-down.active { border-color: #ef4444; background: rgba(239, 68, 68, 0.2); }
+    .feedback-status { font-size: 0.8rem; color: #666; min-width: 80px; text-align: center; }
+    .comment-input { margin-top: 0.75rem; width: 100%; max-width: 400px; }
+    .comment-input input { width: 100%; padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid #444; background: #222; color: white; font-size: 0.85rem; }
+    .comment-input input::placeholder { color: #666; }
+    .side-panel { width: 320px; background: #111; border-left: 1px solid #333; display: flex; flex-direction: column; max-height: calc(100vh - 60px); }
+    .panel-tabs { display: flex; border-bottom: 1px solid #333; }
+    .panel-tab { flex: 1; padding: 0.75rem; background: none; border: none; color: #666; cursor: pointer; font-size: 0.8rem; border-bottom: 2px solid transparent; }
+    .panel-tab:hover { color: #999; }
+    .panel-tab.active { color: white; border-bottom-color: #666; }
+    .panel-content { flex: 1; overflow-y: auto; padding: 1rem; }
+    .panel-section { display: none; }
+    .panel-section.active { display: block; }
+    .info-panel h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #ccc; }
+    .info-field { margin-bottom: 1rem; }
+    .info-field label { font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
+    .info-field p { font-size: 0.85rem; color: #aaa; margin-top: 0.25rem; line-height: 1.4; }
+    .export-panel h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #ccc; }
+    .export-panel p { font-size: 0.8rem; color: #666; margin-bottom: 1rem; }
+    .export-textarea { width: 100%; height: 300px; padding: 0.75rem; border-radius: 4px; border: 1px solid #444; background: #1a1a1a; color: #aaa; font-family: monospace; font-size: 0.75rem; resize: vertical; }
+    .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid #444; background: #333; color: white; cursor: pointer; font-size: 0.8rem; width: 100%; }
+    .copy-btn:hover { background: #444; }
+    .stats { margin-bottom: 1rem; padding: 0.75rem; background: #1a1a1a; border-radius: 4px; font-size: 0.8rem; }
+    .stats-row { display: flex; justify-content: space-between; margin-bottom: 0.25rem; }
+    .stats-row span:first-child { color: #666; }
+    .layout-band .page-word { bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 70%, transparent 100%); text-align: center; font-size: clamp(2rem, 8vw, 3.5rem); }
+    .layout-float .page-word { bottom: 2rem; right: 2rem; font-size: clamp(2rem, 8vw, 3.5rem); text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.4); }
+    .layout-knockout .page-word { top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: clamp(3rem, 15vw, 7rem); letter-spacing: 0.3em; opacity: 0.15; mix-blend-mode: overlay; text-shadow: none; }
+    .layout-corner .page-word { top: 1.5rem; left: 1.5rem; font-size: clamp(1.5rem, 5vw, 2.5rem); background: rgba(0,0,0,0.7); padding: 0.5rem 1rem; border-radius: 4px; }
+    .layout-vertical .page-word { writing-mode: vertical-rl; text-orientation: mixed; right: 1.5rem; top: 50%; transform: translateY(-50%); font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6); }
+    .font-inter .page-word { font-family: 'Inter', sans-serif; font-weight: 900; }
+    .font-playfair .page-word { font-family: 'Playfair Display', serif; font-weight: 900; }
+    .font-space .page-word { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    .font-system .page-word { font-family: system-ui, sans-serif; font-weight: 800; }
+    .color-white .page-word { color: white; }
+    .color-warm .page-word { color: #fef3c7; }
+    .color-cool .page-word { color: #e0f2fe; }
+    .color-gold .page-word { color: #fcd34d; }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <div><label>Layout</label><br><select id="layout"><option value="band">A: Bottom Band</option><option value="float">B: Floating</option><option value="knockout">C: Knockout</option><option value="corner">D: Corner</option><option value="vertical">E: Vertical</option></select></div>
+    <div><label>Font</label><br><select id="font"><option value="inter">Inter</option><option value="playfair">Playfair</option><option value="space">Space Grotesk</option><option value="system">System UI</option></select></div>
+    <div><label>Color</label><br><select id="color"><option value="white">White</option><option value="warm">Warm</option><option value="cool">Cool</option><option value="gold">Gold</option></select></div>
+    <span class="category-tag" id="category">Cosmos</span>
+    <div class="nav-buttons">
+      <button id="prev">&larr;</button>
+      <span class="page-indicator"><span id="current">1</span> / <span id="total">1</span></span>
+      <button id="next">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="viewer">
+      <div class="page layout-band font-inter color-white" id="page">
+        <div class="page-image" id="pageImage"></div>
+        <div class="page-word" id="pageWord"></div>
+      </div>
+      <div class="feedback-buttons">
+        <button class="feedback-btn thumbs-up" id="thumbsUp" title="Keep this image">👍</button>
+        <span class="feedback-status" id="feedbackStatus">No rating</span>
+        <button class="feedback-btn thumbs-down" id="thumbsDown" title="Replace this image">👎</button>
+      </div>
+      <div class="comment-input">
+        <input type="text" id="commentInput" placeholder="Add a comment (why thumbs down, what you'd prefer...)" />
+      </div>
+    </div>
+
+    <div class="side-panel">
+      <div class="panel-tabs">
+        <button class="panel-tab active" data-panel="info">Info</button>
+        <button class="panel-tab" data-panel="export">Export</button>
+      </div>
+      <div class="panel-content">
+        <div class="panel-section info-panel active" id="infoPanel">
+          <h3 id="infoTitle">Nebula</h3>
+          <div class="info-field"><label>Source</label><p id="infoSource">—</p></div>
+          <div class="info-field"><label>For Parents</label><p id="infoParent">—</p></div>
+          <div class="info-field"><label>Did You Know?</label><p id="infoFact">—</p></div>
+          <div class="info-field"><label>License</label><p id="infoLicense">—</p></div>
+        </div>
+        <div class="panel-section export-panel" id="exportPanel">
+          <h3>Feedback Export</h3>
+          <p>Copy this and paste it back to Claude for processing.</p>
+          <div class="stats">
+            <div class="stats-row"><span>Total reviewed:</span><span id="statReviewed">0</span></div>
+            <div class="stats-row"><span>Thumbs up:</span><span id="statUp">0</span></div>
+            <div class="stats-row"><span>Thumbs down:</span><span id="statDown">0</span></div>
+            <div class="stats-row"><span>Broken images:</span><span id="statBroken">0</span></div>
+            <div class="stats-row"><span>Unrated:</span><span id="statUnrated">0</span></div>
+          </div>
+          <textarea class="export-textarea" id="exportText" readonly></textarea>
+          <button class="copy-btn" id="copyBtn">Copy to Clipboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Using more reliable image sources - Unsplash, NASA, and verified Wikimedia
+    const pages = [
+      // COSMOS - NASA & verified sources
+      { word: "Nebula", image: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1024", category: "Cosmos" },
+      { word: "Galaxy", image: "https://images.unsplash.com/photo-1538370965046-79c0d6907d47?w=1024", category: "Cosmos" },
+      { word: "Aurora", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1024", category: "Cosmos" },
+      { word: "Saturn", image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1024", category: "Cosmos" },
+      { word: "Jupiter", image: "https://images.unsplash.com/photo-1614314107768-6018061b5b72?w=1024", category: "Cosmos" },
+      { word: "Eclipse", image: "https://images.unsplash.com/photo-1503416997304-7f8bf166c121?w=1024", category: "Cosmos" },
+      { word: "Supernova", image: "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1024", category: "Cosmos" },
+      { word: "Comet", image: "https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?w=1024", category: "Cosmos" },
+      { word: "Cosmos", image: "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=1024", category: "Cosmos" },
+
+      // NATURE - Unsplash verified
+      { word: "Crystal", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Quartz%2C_Tibet.jpg/960px-Quartz%2C_Tibet.jpg", category: "Nature" },
+      { word: "Jellyfish", image: "https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1024", category: "Nature" },
+      { word: "Peacock", image: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=1024", category: "Nature" },
+      { word: "Lightning", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg/960px-Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg", category: "Nature" },
+      { word: "Coral", image: "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1024", category: "Nature" },
+      { word: "Lava", image: "https://images.unsplash.com/photo-1476067897447-d0c5df27b5df?w=1024", category: "Nature" },
+      { word: "Bioluminescence", image: "https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=1024", category: "Nature" },
+      { word: "Iridescence", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1024", category: "Nature" },
+      { word: "Metamorphosis", image: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=1024", category: "Nature" },
+      { word: "Rainbow", image: "https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=1024", category: "Nature" },
+      { word: "Glacier", image: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=1024", category: "Nature" },
+      { word: "Camouflage", image: "https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1024", category: "Nature" },
+
+      // FRACTALS - Unsplash
+      { word: "Fractal", image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1024", category: "Fractals" },
+      { word: "Spiral", image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1024", category: "Fractals" },
+      { word: "Hexagon", image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1024", category: "Fractals" },
+      { word: "Symmetry", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1024", category: "Fractals" },
+      { word: "Tessellation", image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1024", category: "Fractals" },
+      { word: "Fibonacci", image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1024", category: "Fractals" },
+
+      // MYTHOLOGY - Wikimedia verified public domain art
+      { word: "Dragon", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/960px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg", category: "Mythology" },
+      { word: "Phoenix", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Phoenix_detail_from_Aberdeen_Bestiary.jpg/884px-Phoenix_detail_from_Aberdeen_Bestiary.jpg", category: "Mythology" },
+      { word: "Unicorn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/The_Unicorn_is_Attacked_%28from_the_Unicorn_Tapestries%29_%E2%80%93_467639.jpg/960px-The_Unicorn_is_Attacked_%28from_the_Unicorn_Tapestries%29_%E2%80%93_467639.jpg", category: "Mythology" },
+      { word: "Sphinx", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg/800px-Great_Sphinx_of_Giza_-_20080716a.jpg", category: "Mythology" },
+      { word: "Griffin", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/EB1911_Heraldry_-_Griffin.jpg", category: "Mythology" },
+      { word: "Chimera", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Chimera_d%27arezzo%2C_fi%2C_04.JPG/960px-Chimera_d%27arezzo%2C_fi%2C_04.JPG", category: "Mythology" },
+      { word: "Pegasus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Muse_of_Pegasus_-_Odilon_Redon.jpg/960px-Muse_of_Pegasus_-_Odilon_Redon.jpg", category: "Mythology" },
+      { word: "Leviathan", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/960px-Destruction_of_Leviathan.png", category: "Mythology" },
+
+      // MICROSCOPIC - NIH, Wikimedia verified
+      { word: "Snowflake", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SnowflakesWilsonBentley.jpg/960px-SnowflakesWilsonBentley.jpg", category: "Microscopic" },
+      { word: "Pollen", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/800px-Misc_pollen.jpg", category: "Microscopic" },
+      { word: "Cell", image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1024", category: "Microscopic" },
+      { word: "Neuron", image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1024", category: "Microscopic" },
+      { word: "DNA", image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=1024", category: "Microscopic" },
+      { word: "Virus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Phage.jpg/960px-Phage.jpg", category: "Microscopic" },
+      { word: "Bacteria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/960px-E._coli_Bacteria_%287316101966%29.jpg", category: "Microscopic" },
+
+      // ART - Wikimedia verified masterworks
+      { word: "Cathedral", image: "https://images.unsplash.com/photo-1555921015-5532091f6026?w=1024", category: "Art" },
+      { word: "Mosaic", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ravenna_BW_4.JPG/960px-Ravenna_BW_4.JPG", category: "Art" },
+      { word: "Fresco", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/800px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg", category: "Art" },
+      { word: "Stained Glass", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stained_glass_-_Kutna_Hora.jpg/960px-Stained_glass_-_Kutna_Hora.jpg", category: "Art" },
+      { word: "Sculpture", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%27David%27_by_Michelangelo_Fir_JBU005.jpg/960px-%27David%27_by_Michelangelo_Fir_JBU005.jpg", category: "Art" },
+      { word: "Pyramid", image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=1024", category: "Art" },
+      { word: "Tapestry", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg/960px-Bayeux_Tapestry_scene57_Harold_death.jpg", category: "Art" },
+      { word: "Pagoda", image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1024", category: "Art" },
+      { word: "Mandala", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1024", category: "Art" },
+
+      // ALCHEMICAL - Wikimedia verified engravings
+      { word: "Ouroboros", image: "https://upload.wikimedia.org/wikipedia/commons/7/71/Serpiente_alquimica.jpg", category: "Alchemical" },
+      { word: "Alchemy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg/960px-Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg", category: "Alchemical" },
+      { word: "Macrocosm", image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Vitruvian_macrocosm.jpg", category: "Alchemical" },
+      { word: "Rebis", image: "https://upload.wikimedia.org/wikipedia/commons/9/97/Rebis.png", category: "Alchemical" },
+      { word: "Labyrinth", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Labyrinth_at_Chartres_Cathedral.JPG/960px-Labyrinth_at_Chartres_Cathedral.JPG", category: "Alchemical" },
+      { word: "Caduceus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caduceus.svg/400px-Caduceus.svg.png", category: "Alchemical" },
+    ];
+
+    // Track broken images
+    const brokenImages = new Set();
+    const feedback = {};
+    let currentPage = 0;
+
+    const pageEl = document.getElementById('page');
+    const imageEl = document.getElementById('pageImage');
+    const wordEl = document.getElementById('pageWord');
+    const currentEl = document.getElementById('current');
+    const totalEl = document.getElementById('total');
+    const categoryEl = document.getElementById('category');
+    const feedbackStatus = document.getElementById('feedbackStatus');
+    const commentInput = document.getElementById('commentInput');
+    const thumbsUp = document.getElementById('thumbsUp');
+    const thumbsDown = document.getElementById('thumbsDown');
+
+    totalEl.textContent = pages.length;
+
+    // Preload and check all images
+    pages.forEach((p, i) => {
+      const img = new Image();
+      img.onerror = () => {
+        brokenImages.add(p.word);
+        updateExport();
+      };
+      img.src = p.image;
+    });
+
+    function updatePage() {
+      const p = pages[currentPage];
+      imageEl.style.backgroundImage = `url(${p.image})`;
+      imageEl.classList.toggle('broken', brokenImages.has(p.word));
+      wordEl.textContent = p.word;
+      currentEl.textContent = currentPage + 1;
+      categoryEl.textContent = p.category;
+
+      document.getElementById('infoTitle').textContent = p.word;
+      document.getElementById('infoSource').textContent = p.source || '—';
+      document.getElementById('infoParent').textContent = p.parentInfo || '—';
+      document.getElementById('infoFact').textContent = p.fact || '—';
+      document.getElementById('infoLicense').textContent = p.license || '—';
+
+      const fb = feedback[p.word] || {};
+      thumbsUp.classList.toggle('active', fb.rating === 'up');
+      thumbsDown.classList.toggle('active', fb.rating === 'down');
+      commentInput.value = fb.comment || '';
+
+      if (brokenImages.has(p.word)) {
+        feedbackStatus.textContent = '⚠ Broken';
+        feedbackStatus.style.color = '#f59e0b';
+      } else if (fb.rating === 'up') {
+        feedbackStatus.textContent = '✓ Approved';
+        feedbackStatus.style.color = '#22c55e';
+      } else if (fb.rating === 'down') {
+        feedbackStatus.textContent = '✗ Replace';
+        feedbackStatus.style.color = '#ef4444';
+      } else {
+        feedbackStatus.textContent = 'No rating';
+        feedbackStatus.style.color = '#666';
+      }
+      updateExport();
+    }
+
+    function setRating(rating) {
+      const p = pages[currentPage];
+      if (!feedback[p.word]) feedback[p.word] = {};
+      if (feedback[p.word].rating === rating) {
+        feedback[p.word].rating = null;
+      } else {
+        feedback[p.word].rating = rating;
+      }
+      updatePage();
+    }
+
+    function updateExport() {
+      const downs = [];
+      const broken = [];
+      let upCount = 0, downCount = 0;
+
+      pages.forEach(p => {
+        if (brokenImages.has(p.word)) {
+          broken.push({ word: p.word, category: p.category, currentImage: p.image });
+        }
+        const fb = feedback[p.word];
+        if (fb) {
+          if (fb.rating === 'up') upCount++;
+          if (fb.rating === 'down') {
+            downCount++;
+            downs.push({ word: p.word, category: p.category, comment: fb.comment || '', currentImage: p.image });
+          }
+        }
+      });
+
+      document.getElementById('statReviewed').textContent = upCount + downCount;
+      document.getElementById('statUp').textContent = upCount;
+      document.getElementById('statDown').textContent = downCount;
+      document.getElementById('statBroken').textContent = brokenImages.size;
+      document.getElementById('statUnrated').textContent = pages.length - upCount - downCount;
+
+      let exportText = `# BabySees Image Feedback\n\n`;
+      exportText += `Reviewed: ${upCount + downCount}/${pages.length}\n`;
+      exportText += `Approved: ${upCount} | Replace: ${downCount} | Broken: ${brokenImages.size}\n\n`;
+
+      if (broken.length > 0) {
+        exportText += `## Broken Images (need replacement)\n\n`;
+        broken.forEach(b => exportText += `- **${b.word}** (${b.category})\n`);
+        exportText += `\n`;
+      }
+
+      if (downs.length > 0) {
+        exportText += `## Images to Replace (thumbs down)\n\n`;
+        downs.forEach(d => {
+          exportText += `### ${d.word} (${d.category})\n`;
+          if (d.comment) exportText += `Comment: ${d.comment}\n`;
+          exportText += `\n`;
+        });
+      }
+
+      if (broken.length === 0 && downs.length === 0) {
+        exportText += `No issues found yet.\n`;
+      }
+
+      document.getElementById('exportText').value = exportText;
+    }
+
+    thumbsUp.addEventListener('click', () => setRating('up'));
+    thumbsDown.addEventListener('click', () => setRating('down'));
+
+    commentInput.addEventListener('input', (e) => {
+      const p = pages[currentPage];
+      if (!feedback[p.word]) feedback[p.word] = {};
+      feedback[p.word].comment = e.target.value;
+      updateExport();
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const textarea = document.getElementById('exportText');
+      textarea.select();
+      document.execCommand('copy');
+      document.getElementById('copyBtn').textContent = 'Copied!';
+      setTimeout(() => document.getElementById('copyBtn').textContent = 'Copy to Clipboard', 2000);
+    });
+
+    document.querySelectorAll('.panel-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.panel-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.panel-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.panel + 'Panel').classList.add('active');
+      });
+    });
+
+    function updateLayout() {
+      const layout = document.getElementById('layout').value;
+      const font = document.getElementById('font').value;
+      const color = document.getElementById('color').value;
+      pageEl.className = `page layout-${layout} font-${font} color-${color}`;
+    }
+
+    document.getElementById('layout').addEventListener('change', updateLayout);
+    document.getElementById('font').addEventListener('change', updateLayout);
+    document.getElementById('color').addEventListener('change', updateLayout);
+
+    document.getElementById('prev').addEventListener('click', () => { currentPage = (currentPage - 1 + pages.length) % pages.length; updatePage(); });
+    document.getElementById('next').addEventListener('click', () => { currentPage = (currentPage + 1) % pages.length; updatePage(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target === commentInput) return;
+      if (e.key === 'ArrowLeft') { currentPage = (currentPage - 1 + pages.length) % pages.length; updatePage(); }
+      else if (e.key === 'ArrowRight') { currentPage = (currentPage + 1) % pages.length; updatePage(); }
+    });
+
+    updatePage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>BabySees - Visual Vocabulary for Little Minds</title>
+  <meta name="description" content="A beautiful visual vocabulary book series for babies. High-contrast images to stimulate growing minds.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      min-height: 100%;
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .library {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .logo {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: clamp(0.75rem, 3vw, 1rem);
+      color: #666;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .book {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      text-decoration: none;
+    }
+    .book:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .book-cover {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .book-cover::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .book-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      z-index: 1;
+    }
+    .book-number {
+      font-size: 0.65rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.3rem;
+    }
+    .book-title {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .book-subtitle {
+      font-size: 0.75rem;
+      color: #999;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .book-pages {
+      font-size: 0.65rem;
+      color: #555;
+      margin-top: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #444;
+      font-size: 0.7rem;
+    }
+    .footer a {
+      color: #666;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="library">
+    <div class="header">
+      <h1 class="logo">BabySees</h1>
+      <p class="tagline">Visual Vocabulary for Little Minds</p>
+    </div>
+
+    <div class="books">
+      <a href="book1.html" class="book">
+        <div class="book-cover" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg')"></div>
+        <div class="book-info">
+          <div class="book-number">Book One</div>
+          <h2 class="book-title">What We See</h2>
+          <p class="book-subtitle">Sun, moon, earth, and life. The world around us from sky to sea.</p>
+          <div class="book-pages">20 Pages</div>
+        </div>
+      </a>
+
+      <a href="book2.html" class="book">
+        <div class="book-cover" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/800px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg')"></div>
+        <div class="book-info">
+          <div class="book-number">Book Two</div>
+          <h2 class="book-title">What We Discover</h2>
+          <p class="book-subtitle">Microscopic worlds, patterns, and deep space. Hidden wonders revealed.</p>
+          <div class="book-pages">20 Pages</div>
+        </div>
+      </a>
+
+      <a href="book3.html" class="book">
+        <div class="book-cover" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/800px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg')"></div>
+        <div class="book-info">
+          <div class="book-number">Book Three</div>
+          <h2 class="book-title">What We Dream</h2>
+          <p class="book-subtitle">Mythology, fantasy, and art. Stories humanity has always told.</p>
+          <div class="book-pages">20 Pages</div>
+        </div>
+      </a>
+
+      <a href="book4.html" class="book">
+        <div class="book-cover" style="background-image: url('https://mule-router-assets.muleusercontent.com/router_public/production/ephemeral/a7c9d619-e364-4984-95c9-af1488ba5f40/result_00.png')"></div>
+        <div class="book-info">
+          <div class="book-number">Book Four</div>
+          <h2 class="book-title">What We Feel</h2>
+          <p class="book-subtitle">Love, wonder, and joy. The feelings closest to our hearts.</p>
+          <div class="book-pages">19 Pages</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="footer">
+      <p>Images from NASA, ESA, Hubble, Wikimedia Commons, Unsplash & AI</p>
+    </div>
+  </div>
+</body>
+</html>

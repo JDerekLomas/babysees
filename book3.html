@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>BabySees - What We Dream</title>
+  <meta name="description" content="Book 3: What We Dream. Mythology, fantasy, and art.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Inter', system-ui, sans-serif;
+      touch-action: pan-x;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .app {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.9);
+      border-bottom: 1px solid #1a1a1a;
+      z-index: 50;
+      flex-shrink: 0;
+      gap: 0.5rem;
+    }
+    .logo {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #666;
+      text-decoration: none;
+    }
+    .logo:hover { color: #888; }
+    .header-center {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .category {
+      font-size: 0.65rem;
+      background: #1a1a1a;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .progress {
+      font-size: 0.75rem;
+      color: #444;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .mode-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #1a1a1a;
+      padding: 0.2rem;
+      border-radius: 6px;
+    }
+    .mode-btn {
+      padding: 0.25rem 0.5rem;
+      border: none;
+      background: transparent;
+      color: #555;
+      font-size: 0.65rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .mode-btn.active {
+      background: #333;
+      color: #fff;
+    }
+    .mode-btn:hover:not(.active) {
+      color: #888;
+    }
+
+    .viewer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .app.edit-mode .viewer {
+      flex: none;
+      padding: 0.5rem 1rem;
+    }
+
+    .page {
+      width: min(80vw, 80vh, 550px);
+      aspect-ratio: 1;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      background: #111;
+    }
+    .app.edit-mode .page {
+      width: min(60vw, 50vh, 400px);
+    }
+
+    .page-image {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 0.3s;
+    }
+    .page-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 30%, transparent 60%);
+    }
+    .page-image.loading { opacity: 0; }
+
+    .page-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 1rem 1rem;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .page-word {
+      font-size: clamp(1.8rem, 10vw, 3.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: white;
+      user-select: none;
+    }
+    .app.edit-mode .page-word {
+      font-size: clamp(1.2rem, 6vw, 2rem);
+    }
+
+    .page-subtitle {
+      font-size: clamp(0.6rem, 2.5vw, 0.85rem);
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+      margin-bottom: 0.3rem;
+    }
+
+    .page-body {
+      font-size: clamp(0.55rem, 2vw, 0.7rem);
+      color: rgba(255,255,255,0.7);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .page-credits {
+      font-size: clamp(0.4rem, 1.5vw, 0.5rem);
+      color: rgba(255,255,255,0.5);
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: left;
+      padding: 0 0.5rem;
+      max-height: 70%;
+      overflow-y: auto;
+    }
+    .page-credits-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+
+    .nav-zones {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      z-index: 20;
+    }
+    .nav-zone { flex: 1; cursor: pointer; }
+    .nav-zone:active { background: rgba(255,255,255,0.02); }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 30;
+      display: none;
+    }
+    @media (hover: hover) {
+      .nav-btn { display: flex; align-items: center; justify-content: center; }
+      .viewer:hover .nav-btn { opacity: 0.6; }
+      .nav-btn:hover { opacity: 1; background: rgba(255,255,255,0.15); }
+    }
+    .nav-btn.prev { left: 1rem; }
+    .nav-btn.next { right: 1rem; }
+
+    .feedback-panel {
+      display: none;
+      background: #111;
+      border-top: 1px solid #222;
+      padding: 1rem;
+      flex-shrink: 0;
+      max-height: 40vh;
+      overflow-y: auto;
+    }
+    .app.edit-mode .feedback-panel {
+      display: block;
+    }
+    .feedback-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .feedback-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #888;
+    }
+    .feedback-page-info {
+      font-size: 0.7rem;
+      color: #555;
+    }
+    .status-buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .status-btn {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      color: #666;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .status-btn:hover {
+      border-color: #444;
+      color: #888;
+    }
+    .status-btn.active.good {
+      background: #1a3a1a;
+      border-color: #2a5a2a;
+      color: #6c6;
+    }
+    .status-btn.active.replace {
+      background: #3a1a1a;
+      border-color: #5a2a2a;
+      color: #c66;
+    }
+    .status-btn.active.question {
+      background: #3a3a1a;
+      border-color: #5a5a2a;
+      color: #cc6;
+    }
+    .notes-area {
+      width: 100%;
+      min-height: 60px;
+      padding: 0.5rem;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 0.75rem;
+      font-family: inherit;
+      border-radius: 6px;
+      resize: vertical;
+      margin-bottom: 0.5rem;
+    }
+    .notes-area:focus {
+      outline: none;
+      border-color: #555;
+    }
+    .notes-area::placeholder {
+      color: #444;
+    }
+    .feedback-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
+    .feedback-btn {
+      padding: 0.4rem 0.75rem;
+      border: none;
+      background: #333;
+      color: #aaa;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .feedback-btn:hover {
+      background: #444;
+      color: #fff;
+    }
+    .feedback-btn.primary {
+      background: #2a4a6a;
+      color: #8cf;
+    }
+    .feedback-btn.primary:hover {
+      background: #3a5a7a;
+    }
+
+    .export-btn {
+      display: none;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #333;
+      background: transparent;
+      color: #555;
+      font-size: 0.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .app.edit-mode .export-btn {
+      display: block;
+    }
+    .export-btn:hover {
+      border-color: #555;
+      color: #888;
+    }
+
+    footer {
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      background: rgba(0,0,0,0.9);
+      flex-shrink: 0;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #333;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .dot:hover { background: #555; }
+    .dot.active { background: #888; transform: scale(1.3); }
+    .dot.has-feedback { box-shadow: 0 0 0 2px #4a4a2a; }
+    .dot.good { background: #4a4; }
+    .dot.replace { background: #a44; }
+    .dot.question { background: #aa4; }
+
+    .loader {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      z-index: 10;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+    .loader.hidden { opacity: 0; pointer-events: none; }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #222;
+      border-top-color: #666;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="app" id="app">
+    <header>
+      <a href="index.html" class="logo">BABYSEES</a>
+      <div class="header-center">
+        <span class="category" id="category">Mythology</span>
+        <span class="progress"><span id="current">1</span>/<span id="total">20</span></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="export-btn" id="exportBtn" title="Export all feedback">Export</button>
+        <div class="mode-toggle">
+          <button class="mode-btn active" id="readMode">Read</button>
+          <button class="mode-btn" id="editMode">Edit</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="viewer" id="viewer">
+      <div class="loader" id="loader"><div class="spinner"></div></div>
+      <div class="page" id="page">
+        <div class="page-image" id="pageImage"></div>
+        <div class="page-content" id="pageContent"></div>
+      </div>
+      <div class="nav-zones">
+        <div class="nav-zone" id="navPrev"></div>
+        <div class="nav-zone" id="navNext"></div>
+      </div>
+      <button class="nav-btn prev" id="btnPrev">&#8249;</button>
+      <button class="nav-btn next" id="btnNext">&#8250;</button>
+    </div>
+
+    <div class="feedback-panel" id="feedbackPanel">
+      <div class="feedback-header">
+        <span class="feedback-title">Page Feedback</span>
+        <span class="feedback-page-info" id="feedbackPageInfo">Page 1: Title</span>
+      </div>
+      <div class="status-buttons">
+        <button class="status-btn" data-status="good">Good</button>
+        <button class="status-btn" data-status="replace">Replace</button>
+        <button class="status-btn" data-status="question">Question</button>
+      </div>
+      <textarea class="notes-area" id="notesArea" placeholder="Add notes about this page..."></textarea>
+      <div class="feedback-actions">
+        <button class="feedback-btn" id="clearFeedback">Clear</button>
+        <button class="feedback-btn primary" id="saveFeedback">Save</button>
+      </div>
+    </div>
+
+    <footer id="dots"></footer>
+  </div>
+
+  <script>
+    // Book 3: What We Dream
+    const bookId = 'book3';
+    const bookTitle = "What We Dream";
+    const bookIntro = "Stories We Tell";
+    const bookDesc = "Across all cultures and centuries, humans have dreamed of dragons and heroes, built temples that touch the sky, and created art that captures the soul. These are the stories we have always told.";
+
+    // Pages reordered for Light & Color Arc: Bright -> Cool -> Warm
+    const pages = [
+      // Title
+      { word: "BabySees", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/800px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg", category: "Title", isTitle: true, license: "Paolo Uccello • Public Domain" },
+      // Inside cover
+      { word: "Introduction", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stained_glass_-_Kutna_Hora.jpg/800px-Stained_glass_-_Kutna_Hora.jpg", category: "Introduction", isInsideCover: true },
+      // BRIGHT: Colorful, light-filled
+      { word: "Phoenix", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Phoenix_detail_from_Aberdeen_Bestiary.jpg/800px-Phoenix_detail_from_Aberdeen_Bestiary.jpg", category: "Bright", license: "Aberdeen Bestiary • Public Domain" },
+      { word: "Stained Glass", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stained_glass_-_Kutna_Hora.jpg/960px-Stained_glass_-_Kutna_Hora.jpg", category: "Bright", license: "Che • CC BY-SA 2.5" },
+      { word: "Mosaic", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ravenna_BW_4.JPG/800px-Ravenna_BW_4.JPG", category: "Bright", license: "Berthold Werner • Public Domain" },
+      { word: "Unicorn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Verteuil_unicorn.jpg/800px-Verteuil_unicorn.jpg", category: "Bright", license: "The Cloisters • Public Domain" },
+      { word: "Griffin", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Griffin_Pisa.JPG/800px-Griffin_Pisa.JPG", category: "Bright", license: "Sailko • CC BY 3.0" },
+      // COOL: Stone, shadow, mystery
+      { word: "Sphinx", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg/800px-Great_Sphinx_of_Giza_-_20080716a.jpg", category: "Cool", license: "Barcex • CC BY-SA 3.0" },
+      { word: "Cathedral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Notre-Dame_de_Paris%2C_4_October_2017.jpg/800px-Notre-Dame_de_Paris%2C_4_October_2017.jpg", category: "Cool", license: "GFreihalter • CC BY-SA 3.0" },
+      { word: "Pyramid", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/800px-Kheops-Pyramid.jpg", category: "Cool", license: "Nina Aldin Thune • CC BY-SA 2.5" },
+      { word: "Pagoda", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Horyu-ji08s3200.jpg/800px-Horyu-ji08s3200.jpg", category: "Cool", license: "663highland • CC BY-SA 3.0" },
+      { word: "Temple", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/800px-The_Parthenon_in_Athens.jpg", category: "Cool", license: "Steve Swayne • CC BY 2.0" },
+      { word: "Labyrinth", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Labyrinth_at_Chartres_Cathedral.JPG/800px-Labyrinth_at_Chartres_Cathedral.JPG", category: "Cool", license: "Maksim • CC BY-SA 3.0" },
+      { word: "Leviathan", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/800px-Destruction_of_Leviathan.png", category: "Cool", license: "Gustave Dore • Public Domain" },
+      // WARM: Rich colors, gold, fire
+      { word: "Dragon", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/960px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg", category: "Warm", license: "Paolo Uccello • Public Domain" },
+      { word: "Sculpture", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%27David%27_by_Michelangelo_Fir_JBU005.jpg/800px-%27David%27_by_Michelangelo_Fir_JBU005.jpg", category: "Warm", license: "Fir0002 • CC BY-SA 3.0" },
+      { word: "Tapestry", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg/800px-Bayeux_Tapestry_scene57_Harold_death.jpg", category: "Warm", license: "Myrabella • Public Domain" },
+      { word: "Mandala", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chenrezig_Sand_Mandala.jpg/800px-Chenrezig_Sand_Mandala.jpg", category: "Warm", license: "Mario Biondi • CC BY-SA 2.0" },
+      { word: "Alchemy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg/800px-Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg", category: "Warm", license: "Heinrich Khunrath • Public Domain" },
+      // Credits
+      { word: "Credits", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg/800px-Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg", category: "Credits", isCredits: true },
+    ];
+
+    const imageCache = new Map();
+    let currentPage = 0;
+    let editMode = false;
+
+    const app = document.getElementById('app');
+    const imageEl = document.getElementById('pageImage');
+    const contentEl = document.getElementById('pageContent');
+    const loader = document.getElementById('loader');
+    const dotsContainer = document.getElementById('dots');
+    const notesArea = document.getElementById('notesArea');
+
+    document.getElementById('total').textContent = pages.length;
+
+    document.getElementById('readMode').onclick = () => setMode(false);
+    document.getElementById('editMode').onclick = () => setMode(true);
+
+    function setMode(isEdit) {
+      editMode = isEdit;
+      app.classList.toggle('edit-mode', isEdit);
+      document.getElementById('readMode').classList.toggle('active', !isEdit);
+      document.getElementById('editMode').classList.toggle('active', isEdit);
+      if (isEdit) loadFeedback();
+      updateDots();
+    }
+
+    pages.forEach((p, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      dot.onclick = () => goToPage(i);
+      dotsContainer.appendChild(dot);
+    });
+
+    function preloadImage(index) {
+      if (index < 0 || index >= pages.length) return Promise.resolve();
+      const p = pages[index];
+      if (!p.image) return Promise.resolve();
+      if (imageCache.has(p.image)) return Promise.resolve();
+
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => { imageCache.set(p.image, true); resolve(); };
+        img.onerror = () => { imageCache.set(p.image, false); resolve(); };
+        img.src = p.image;
+      });
+    }
+
+    function preloadAdjacent() {
+      [currentPage - 1, currentPage + 1, currentPage + 2].forEach(i => preloadImage(i));
+    }
+
+    function getCreditsHTML() {
+      const contentPages = pages.filter(p => !p.isTitle && !p.isInsideCover && !p.isCredits && p.license);
+      let html = '<div class="page-credits"><div class="page-credits-title">Image Credits</div>';
+      contentPages.forEach((pg) => {
+        const pageNum = pages.indexOf(pg) + 1;
+        html += `<div>${pageNum}. ${pg.word}: ${pg.license}</div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+
+    function getFeedbackKey(pageIndex) {
+      return `babysees_${bookId}_page${pageIndex}`;
+    }
+
+    function getFeedback(pageIndex) {
+      const data = localStorage.getItem(getFeedbackKey(pageIndex));
+      return data ? JSON.parse(data) : { status: null, notes: '' };
+    }
+
+    function saveFeedbackData(pageIndex, status, notes) {
+      const data = { status, notes, timestamp: Date.now() };
+      localStorage.setItem(getFeedbackKey(pageIndex), JSON.stringify(data));
+      updateDots();
+    }
+
+    function clearFeedbackData(pageIndex) {
+      localStorage.removeItem(getFeedbackKey(pageIndex));
+      updateDots();
+    }
+
+    function loadFeedback() {
+      const feedback = getFeedback(currentPage);
+      notesArea.value = feedback.notes || '';
+      document.querySelectorAll('.status-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.status === feedback.status);
+      });
+      document.getElementById('feedbackPageInfo').textContent =
+        `Page ${currentPage + 1}: ${pages[currentPage].word}`;
+    }
+
+    function updateDots() {
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        const feedback = getFeedback(i);
+        d.className = 'dot';
+        if (i === currentPage) d.classList.add('active');
+        if (feedback.status) {
+          d.classList.add(feedback.status);
+        } else if (feedback.notes) {
+          d.classList.add('has-feedback');
+        }
+      });
+    }
+
+    document.querySelectorAll('.status-btn').forEach(btn => {
+      btn.onclick = () => {
+        const wasActive = btn.classList.contains('active');
+        document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+        if (!wasActive) btn.classList.add('active');
+      };
+    });
+
+    document.getElementById('saveFeedback').onclick = () => {
+      const activeBtn = document.querySelector('.status-btn.active');
+      const status = activeBtn ? activeBtn.dataset.status : null;
+      saveFeedbackData(currentPage, status, notesArea.value);
+    };
+
+    document.getElementById('clearFeedback').onclick = () => {
+      clearFeedbackData(currentPage);
+      notesArea.value = '';
+      document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+    };
+
+    document.getElementById('exportBtn').onclick = () => {
+      const allFeedback = [];
+      pages.forEach((p, i) => {
+        const feedback = getFeedback(i);
+        if (feedback.status || feedback.notes) {
+          allFeedback.push({
+            page: i + 1,
+            word: p.word,
+            category: p.category,
+            ...feedback
+          });
+        }
+      });
+      const blob = new Blob([JSON.stringify({ book: bookId, title: bookTitle, feedback: allFeedback }, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${bookId}-feedback.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    };
+
+    async function updatePage() {
+      const p = pages[currentPage];
+
+      const isCached = imageCache.get(p.image);
+      if (!isCached && p.image) {
+        imageEl.classList.add('loading');
+        loader.classList.remove('hidden');
+      }
+
+      await preloadImage(currentPage);
+      imageEl.style.backgroundImage = `url(${p.image})`;
+      imageEl.classList.remove('loading');
+      loader.classList.add('hidden');
+
+      if (p.isTitle) {
+        contentEl.innerHTML = `
+          <div class="page-subtitle">${bookTitle}</div>
+          <div class="page-word">BabySees</div>
+        `;
+      } else if (p.isInsideCover) {
+        contentEl.innerHTML = `
+          <div class="page-word" style="font-size:clamp(1.2rem,6vw,2rem);margin-bottom:0.5rem">${bookIntro}</div>
+          <div class="page-body">${bookDesc}</div>
+        `;
+      } else if (p.isCredits) {
+        contentEl.innerHTML = getCreditsHTML();
+      } else {
+        contentEl.innerHTML = `<div class="page-word">${p.word}</div>`;
+      }
+
+      document.getElementById('current').textContent = currentPage + 1;
+      document.getElementById('category').textContent = p.category;
+
+      updateDots();
+      if (editMode) loadFeedback();
+
+      preloadAdjacent();
+    }
+
+    function goToPage(index) {
+      if (index === currentPage || index < 0 || index >= pages.length) return;
+      currentPage = index;
+      updatePage();
+    }
+
+    function next() { goToPage(currentPage + 1); }
+    function prev() { goToPage(currentPage - 1); }
+
+    document.getElementById('navPrev').onclick = prev;
+    document.getElementById('navNext').onclick = next;
+    document.getElementById('btnPrev').onclick = prev;
+    document.getElementById('btnNext').onclick = next;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowLeft') prev();
+      else if (e.key === 'ArrowRight') next();
+    });
+
+    let touchStartX = 0;
+    document.getElementById('viewer').addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    document.getElementById('viewer').addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+    }, { passive: true });
+
+    Promise.all([preloadImage(0), preloadImage(1), preloadImage(2)]).then(updatePage);
+  </script>
+</body>
+</html>
