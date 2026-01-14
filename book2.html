@@ -185,37 +185,38 @@
   <script>
     const bookId = 'book2';
     const bookTitle = "What We Discover";
-    const bookIntro = "Hidden Wonders";
-    const bookDesc = "From tiny cells to distant galaxies, there are worlds we cannot see with our eyes alone. Science reveals patterns in nature—spirals, fractals, and tessellations—connecting the very small to the unimaginably vast.";
+    const bookIntro = "Patterns Everywhere";
+    const bookDesc = "Spirals in shells. Hexagons in honeycombs. Stripes on zebras. The same patterns appear again and again—in tiny cells, in our own bodies, and across the vast cosmos.";
 
-    // Pages reordered for Light & Color Arc: Bright -> Cool -> Warm
+    // Arc: Patterns → Microscopic → Inside Us → Solar System → Deep Space
     const pages = [
-      // Title
-      { word: "BabySees", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/800px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg", category: "Title", isTitle: true },
-      // Inside cover
-      { word: "Introduction", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SnowflakesWilsonBentley.jpg/800px-SnowflakesWilsonBentley.jpg", category: "Introduction", isIntro: true },
-      // BRIGHT: Whites, bright colors
-      { word: "Snowflake", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SnowflakesWilsonBentley.jpg/960px-SnowflakesWilsonBentley.jpg", category: "Bright" },
-      { word: "Cell", image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800", category: "Bright" },
-      { word: "Pollen", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/800px-Misc_pollen.jpg", category: "Bright" },
-      { word: "Bacteria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/960px-E._coli_Bacteria_%287316101966%29.jpg", category: "Bright" },
-      // COOL: Blues, purples, deep space
-      { word: "Virus", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Phage.jpg/800px-Phage.jpg", category: "Cool" },
-      { word: "DNA", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/800px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png", category: "Cool" },
-      { word: "Neuron", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Neuron.svg/800px-Neuron.svg.png", category: "Cool" },
-      { word: "Galaxy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/800px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", category: "Cool" },
-      { word: "Saturn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg", category: "Cool" },
-      { word: "Jupiter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/800px-Jupiter_New_Horizons.jpg", category: "Cool" },
-      { word: "Nebula", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg", category: "Cool" },
-      { word: "Cosmos", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/799px-HubbleDeepField.800px.jpg", category: "Cool" },
-      // WARM: Reds, oranges, golds
-      { word: "Supernova", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/800px-Crab_Nebula.jpg", category: "Warm" },
-      { word: "Comet", image: "https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?w=800", category: "Warm" },
-      { word: "Fractal", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/800px-Mandel_zoom_00_mandelbrot_set.jpg", category: "Warm" },
-      { word: "Spiral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/800px-NautilusCutawayLogarithmicSpiral.jpg", category: "Warm" },
-      { word: "Tessellation", image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800", category: "Warm" },
+      // Title & Intro
+      { word: "BabySees", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/800px-NautilusCutawayLogarithmicSpiral.jpg", category: "Title", isTitle: true },
+      { word: "Introduction", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/800px-Mandel_zoom_00_mandelbrot_set.jpg", category: "Intro", isIntro: true },
+      // PATTERNS - Pure visual wonder, no explanation needed
+      { word: "Spiral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/960px-NautilusCutawayLogarithmicSpiral.jpg", category: "Pattern" },
+      { word: "Snowflake", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SnowflakesWilsonBentley.jpg/800px-SnowflakesWilsonBentley.jpg", category: "Pattern" },
+      { word: "Honeycomb", image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800", category: "Pattern" },
+      { word: "Fractal", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/800px-Mandel_zoom_00_mandelbrot_set.jpg", category: "Pattern" },
+      { word: "Stripes", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/800px-Plains_Zebra_Equus_quagga.jpg", category: "Pattern" },
+      { word: "Ripples", image: "https://images.unsplash.com/photo-1509803874385-db7c23652552?w=800", category: "Pattern" },
+      { word: "Web", image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800", category: "Pattern" },
+      // MICROSCOPIC - Patterns at tiny scales
+      { word: "Pollen", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/800px-Misc_pollen.jpg", category: "Tiny" },
+      { word: "Cell", image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800", category: "Tiny" },
+      { word: "Bacteria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/800px-E._coli_Bacteria_%287316101966%29.jpg", category: "Tiny" },
+      // INSIDE US - Building blocks of life
+      { word: "DNA", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/800px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png", category: "Life" },
+      { word: "Neuron", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Neuron.svg/800px-Neuron.svg.png", category: "Life" },
+      // SOLAR SYSTEM - Patterns in space
+      { word: "Saturn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg", category: "Space" },
+      { word: "Jupiter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/800px-Jupiter_New_Horizons.jpg", category: "Space" },
+      // DEEP SPACE - The ultimate scale
+      { word: "Galaxy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/800px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", category: "Cosmos" },
+      { word: "Nebula", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg", category: "Cosmos" },
+      { word: "Cosmos", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/799px-HubbleDeepField.800px.jpg", category: "Cosmos" },
       // Credits
-      { word: "Credits", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/800px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg", category: "Credits", isCredits: true },
+      { word: "Credits", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/800px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", category: "Credits", isCredits: true },
     ];
 
     const feedback = {};
