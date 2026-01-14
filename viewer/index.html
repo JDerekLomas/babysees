@@ -23,14 +23,15 @@
     .page-image { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
     .page-image.broken::after { content: "Image failed to load"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #222; color: #666; font-size: 0.9rem; }
     .page-word { position: absolute; text-transform: uppercase; letter-spacing: 0.1em; user-select: none; }
-    .feedback-buttons { display: flex; gap: 1rem; margin-top: 1rem; align-items: center; }
-    .feedback-btn { padding: 0.75rem 1.5rem; border-radius: 8px; border: 2px solid #444; background: #222; color: white; cursor: pointer; font-size: 1.5rem; transition: all 0.15s; }
-    .feedback-btn:hover { transform: scale(1.1); }
+    .feedback-section { margin: 1rem 0; padding: 1rem; background: #1a1a1a; border-radius: 6px; }
+    .feedback-buttons { display: flex; gap: 0.75rem; align-items: center; justify-content: center; }
+    .feedback-btn { padding: 0.5rem 1rem; border-radius: 6px; border: 2px solid #444; background: #222; color: white; cursor: pointer; font-size: 1.25rem; transition: all 0.15s; }
+    .feedback-btn:hover { transform: scale(1.05); }
     .feedback-btn.thumbs-up:hover, .feedback-btn.thumbs-up.active { border-color: #22c55e; background: rgba(34, 197, 94, 0.2); }
     .feedback-btn.thumbs-down:hover, .feedback-btn.thumbs-down.active { border-color: #ef4444; background: rgba(239, 68, 68, 0.2); }
-    .feedback-status { font-size: 0.8rem; color: #666; min-width: 80px; text-align: center; }
-    .comment-input { margin-top: 0.75rem; width: 100%; max-width: 400px; }
-    .comment-input input { width: 100%; padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid #444; background: #222; color: white; font-size: 0.85rem; }
+    .feedback-status { font-size: 0.75rem; color: #666; min-width: 70px; text-align: center; }
+    .comment-input { margin-top: 0.75rem; }
+    .comment-input input { width: 100%; padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid #444; background: #222; color: white; font-size: 0.8rem; }
     .comment-input input::placeholder { color: #666; }
     .side-panel { width: 320px; background: #111; border-left: 1px solid #333; display: flex; flex-direction: column; max-height: calc(100vh - 60px); }
     .panel-tabs { display: flex; border-bottom: 1px solid #333; }
@@ -86,14 +87,6 @@
         <div class="page-image" id="pageImage"></div>
         <div class="page-word" id="pageWord"></div>
       </div>
-      <div class="feedback-buttons">
-        <button class="feedback-btn thumbs-up" id="thumbsUp" title="Keep this image">👍</button>
-        <span class="feedback-status" id="feedbackStatus">No rating</span>
-        <button class="feedback-btn thumbs-down" id="thumbsDown" title="Replace this image">👎</button>
-      </div>
-      <div class="comment-input">
-        <input type="text" id="commentInput" placeholder="Add a comment (why thumbs down, what you'd prefer...)" />
-      </div>
     </div>
 
     <div class="side-panel">
@@ -104,6 +97,16 @@
       <div class="panel-content">
         <div class="panel-section info-panel active" id="infoPanel">
           <h3 id="infoTitle">Nebula</h3>
+          <div class="feedback-section">
+            <div class="feedback-buttons">
+              <button type="button" class="feedback-btn thumbs-up" id="thumbsUp" title="Keep this image">👍</button>
+              <span class="feedback-status" id="feedbackStatus">No rating</span>
+              <button type="button" class="feedback-btn thumbs-down" id="thumbsDown" title="Replace this image">👎</button>
+            </div>
+            <div class="comment-input">
+              <input type="text" id="commentInput" placeholder="Add a comment..." />
+            </div>
+          </div>
           <div class="info-field"><label>Source</label><p id="infoSource">—</p></div>
           <div class="info-field"><label>For Parents</label><p id="infoParent">—</p></div>
           <div class="info-field"><label>Did You Know?</label><p id="infoFact">—</p></div>
@@ -326,10 +329,13 @@
       document.getElementById('exportText').value = exportText;
     }
 
-    thumbsUp.addEventListener('click', () => setRating('up'));
-    thumbsDown.addEventListener('click', () => setRating('down'));
+    thumbsUp.addEventListener('click', (e) => { e.stopPropagation(); setRating('up'); });
+    thumbsDown.addEventListener('click', (e) => { e.stopPropagation(); setRating('down'); });
 
+    commentInput.addEventListener('click', (e) => e.stopPropagation());
+    commentInput.addEventListener('focus', (e) => e.stopPropagation());
     commentInput.addEventListener('input', (e) => {
+      e.stopPropagation();
       const p = pages[currentPage];
       if (!feedback[p.word]) feedback[p.word] = {};
       feedback[p.word].comment = e.target.value;
