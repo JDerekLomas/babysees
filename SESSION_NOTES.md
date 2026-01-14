@@ -1,4 +1,60 @@
 # BabySees Session Notes
+
+---
+
+## Session: 2026-01-14
+
+### What We Learned
+
+**1. Review Interface Issues**
+- Thumbs up/down below the image caused accidental page advances
+- Touch/swipe handlers on `.viewer` div intercepted clicks
+- **Solution:** Move feedback controls to side panel (outside swipe zone)
+- Added "Clear All Feedback" button for when content changes
+
+**2. Narrative Arc > Color Temperature**
+- Original structure: Bright → Cool → Warm (visual cohesion)
+- Problem: No meaningful journey for the child
+- **Better approach for Book 2:** Patterns → Tiny → Life → Space → Cosmos
+- Creates a "zoom out" experience from the familiar to the infinite
+
+**3. Start with Patterns**
+- Patterns need no explanation - pure visual wonder
+- Spirals, snowflakes, honeycombs, fractals, stripes, ripples, webs
+- Child recognizes patterns intuitively before understanding concepts
+
+**4. Credits Must Be Detailed**
+- Generic "Wikimedia Commons" insufficient
+- Need `license` property on each page object
+- `getCreditsHTML()` function renders per-image attribution
+
+**5. Image Sources**
+- Wikimedia: Good quality, but rate-limits curl requests (works in browser)
+- Unsplash: Reliable, but less curated/accurate
+- AI Generation: Best for patterns, abstract concepts, microscopy-style
+
+**6. Images Still Needing Replacement (Book 2)**
+- Honeycomb, Ripples, Web (pattern photos)
+- Cell, Neuron (need dramatic microscopy style)
+
+### Book 2 New Structure
+```
+PATTERNS (7) → TINY (3) → LIFE (2) → SPACE (2) → COSMOS (3)
+Spiral        Pollen      DNA         Saturn      Galaxy
+Snowflake     Cell        Neuron      Jupiter     Nebula
+Honeycomb     Bacteria                            Cosmos
+Fractal
+Stripes
+Ripples
+Web
+```
+
+### Files Changed
+- `book1.html`, `book2.html`, `book3.html`, `book4.html`: Feedback in side panel, clear button
+- `book2.html`: New arc structure, detailed credits
+
+---
+
 **Date:** 2026-01-13
 
 ## Project Summary
