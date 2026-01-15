@@ -35,17 +35,24 @@ curl -s "https://commons.wikimedia.org/wiki/File:Example.JPG" | grep -i "license
 ### 3. Validate License
 
 **Acceptable (in priority order):**
-1. Public Domain (NASA, US Gov, PD-old)
+1. Public Domain (NASA, US Gov, PD-old pre-1928)
 2. CC0 (no restrictions)
 3. Unsplash License
 4. CC BY (attribution only)
-5. CC BY-SA (share-alike ok)
 
 **Reject:**
+- CC BY-SA (share-alike creates complications)
 - CC BY-NC (non-commercial)
 - CC BY-ND (no derivatives)
 - All Rights Reserved
 - Unknown/unclear
+
+**Best sources for Public Domain:**
+- NASA Image Library: https://images.nasa.gov (all PD)
+- USGS: https://www.usgs.gov/media/images (all PD)
+- NOAA: https://www.noaa.gov (most PD)
+- NIAID Flickr: https://www.flickr.com/photos/niaid (all PD)
+- Wikimedia Commons (filter by PD/CC0)
 
 ### 4. Download Image
 

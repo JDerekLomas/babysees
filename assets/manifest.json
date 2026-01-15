@@ -5,67 +5,112 @@
     "book2/honeycomb": {
       "localPath": "assets/book2/honeycomb.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Honey_Bees_and_Honeycomb.JPG",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Western_Honey_Bees_and_Honeycomb.JPG/800px-Western_Honey_Bees_and_Honeycomb.JPG",
-      "license": {
-        "type": "CC BY 3.0",
-        "attribution": "Healthnutlady / Wikimedia Commons",
-        "attributionRequired": true,
-        "url": "https://creativecommons.org/licenses/by/3.0"
-      },
-      "source": "wikimedia",
-      "downloaded": "2026-01-15"
+      "license": { "type": "CC BY 3.0", "attribution": "Healthnutlady / Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia"
     },
     "book2/ripples": {
       "localPath": "assets/book2/ripples.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripple_effect_on_water.jpg",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ripple_effect_on_water.jpg/800px-Ripple_effect_on_water.jpg",
-      "license": {
-        "type": "CC BY 2.0",
-        "attribution": "Sergiu Bacioiu / Flickr",
-        "attributionRequired": true,
-        "url": "https://creativecommons.org/licenses/by/2.0"
-      },
-      "source": "wikimedia",
-      "downloaded": "2026-01-15"
+      "license": { "type": "CC BY 2.0", "attribution": "Sergiu Bacioiu / Flickr", "attributionRequired": true },
+      "source": "wikimedia"
     },
     "book2/web": {
       "localPath": "assets/book2/web.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spider_web_with_dew.JPG",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Spider_web_with_dew.JPG/800px-Spider_web_with_dew.JPG",
-      "license": {
-        "type": "CC0",
-        "attribution": "TGoeller / Wikimedia Commons",
-        "attributionRequired": false,
-        "url": "https://creativecommons.org/publicdomain/zero/1.0"
-      },
-      "source": "wikimedia",
-      "downloaded": "2026-01-15"
+      "license": { "type": "CC0", "attribution": "TGoeller / Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia"
     },
     "book2/cell": {
       "localPath": "assets/book2/cell.png",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Actin_Filaments_in_a_Neuroblastoma_cell_Line.png/800px-Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
-      "license": {
-        "type": "CC BY 4.0",
-        "attribution": "Howard Vindin / Wikimedia Commons",
-        "attributionRequired": true,
-        "url": "https://creativecommons.org/licenses/by/4.0"
-      },
-      "source": "wikimedia",
-      "downloaded": "2026-01-15"
+      "license": { "type": "CC BY 4.0", "attribution": "Howard Vindin / Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia"
     },
     "book2/neuron": {
-      "localPath": "assets/book2/neuron.png",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GFP_Neurons.png",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GFP_Neurons.png/800px-GFP_Neurons.png",
-      "license": {
-        "type": "CC BY-SA 4.0",
-        "attribution": "ManuelSchottdorf / Wikimedia Commons",
-        "attributionRequired": true,
-        "url": "https://creativecommons.org/licenses/by-sa/4.0"
-      },
-      "source": "wikimedia",
-      "downloaded": "2026-01-15"
+      "localPath": "assets/book2/neuron_pd.jpg",
+      "sourceUrl": "https://www.cellimagelibrary.org/images/214",
+      "license": { "type": "Public Domain", "attribution": "Cell Image Library", "attributionRequired": false },
+      "source": "cellimagelibrary",
+      "note": "Replaced CC-BY-SA image with PD alternative"
+    },
+    "book2/dunes": {
+      "localPath": "assets/book2/dunes.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss030e174652",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/citylights": {
+      "localPath": "assets/book2/citylights.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss040e091208",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/delta": {
+      "localPath": "assets/book2/delta.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA03429",
+      "license": { "type": "Public Domain", "attribution": "NASA/Terra", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/lava": {
+      "localPath": "assets/book2/lava.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA22459",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/snowflake": {
+      "localPath": "assets/book2/snowflake.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SnowflakesWilsonBentley.jpg",
+      "license": { "type": "Public Domain", "attribution": "Wilson Bentley (1865-1931)", "attributionRequired": false },
+      "source": "wikimedia"
+    },
+    "book2/aurora": {
+      "localPath": "assets/book2/aurora.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss072e159172",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/canyon": {
+      "localPath": "assets/book2/canyon.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA03402",
+      "license": { "type": "Public Domain", "attribution": "NASA/Terra", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/hurricane": {
+      "localPath": "assets/book2/hurricane.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000947",
+      "license": { "type": "Public Domain", "attribution": "NASA/NOAA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/glacier": {
+      "localPath": "assets/book2/glacier.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA17283",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/crater": {
+      "localPath": "assets/book2/crater.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA24149",
+      "license": { "type": "Public Domain", "attribution": "NASA/JPL-Caltech", "attributionRequired": false },
+      "source": "nasa",
+      "note": "Mars volcano pit craters"
+    },
+    "book2/lightning": {
+      "localPath": "assets/book2/lightning.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss073e0330560",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/earth": {
+      "localPath": "assets/book2/earth.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001386",
+      "license": { "type": "Public Domain", "attribution": "NASA/NPP Blue Marble", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book2/milkyway": {
+      "localPath": "assets/book2/milkyway.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000148",
+      "license": { "type": "Public Domain", "attribution": "NASA/Spitzer", "attributionRequired": false },
+      "source": "nasa"
     }
   }
 }
