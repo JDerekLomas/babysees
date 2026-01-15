@@ -111,6 +111,34 @@
       "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000148",
       "license": { "type": "Public Domain", "attribution": "NASA/Spitzer", "attributionRequired": false },
       "source": "nasa"
+    },
+    "book2/temple": {
+      "localPath": "assets/book2/temple.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/image-catalog/19549855800/",
+      "license": { "type": "CC0", "attribution": "image-catalog / Flickr", "attributionRequired": false },
+      "source": "flickr",
+      "note": "Angkor Wat, Cambodia"
+    },
+    "book2/mandala": {
+      "localPath": "assets/book2/mandala.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/76937974@N03/7052543701/",
+      "license": { "type": "CC0", "attribution": "Flickr user", "attributionRequired": false },
+      "source": "flickr",
+      "note": "Blue mandala digital art"
+    },
+    "book2/fern": {
+      "localPath": "assets/book2/fern.jpg",
+      "sourceUrl": "https://www.biodiversitylibrary.org/page/51651660",
+      "license": { "type": "Public Domain", "attribution": "The Ferns of South Africa (1892) / BHL", "attributionRequired": false },
+      "source": "bhl",
+      "note": "Vintage botanical illustration plate"
+    },
+    "book2/virus": {
+      "localPath": "assets/book2/virus.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/niaid/49534865371/",
+      "license": { "type": "Public Domain", "attribution": "NIAID/NIH", "attributionRequired": false },
+      "source": "niaid",
+      "note": "SARS-CoV-2 colorized transmission electron micrograph"
     }
   }
 }
