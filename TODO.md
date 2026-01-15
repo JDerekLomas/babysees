@@ -1,11 +1,11 @@
 # BabySees TODO
 
 ## Immediate: Book 2 Image Fixes
-- [ ] Replace Honeycomb (current Unsplash not ideal)
-- [ ] Replace Ripples (current Unsplash not ideal)
-- [ ] Replace Web (current Unsplash not ideal)
-- [ ] Replace Cell (need dramatic fluorescent microscopy)
-- [ ] Replace Neuron (need real neuron, not diagram)
+- [x] Replace Honeycomb → `assets/book2/honeycomb.jpg` (CC BY 3.0, Healthnutlady)
+- [x] Replace Ripples → `assets/book2/ripples.jpg` (CC BY 2.0, Sergiu Bacioiu)
+- [x] Replace Web → `assets/book2/web.jpg` (CC0, TGoeller)
+- [x] Replace Cell → `assets/book2/cell.png` (CC BY 4.0, Howard Vindin)
+- [x] Replace Neuron → `assets/book2/neuron.png` (CC BY-SA 4.0, ManuelSchottdorf)
 
 **Options:**
 1. Generate with AI (MuleRouter skill) - best for patterns
@@ -38,21 +38,25 @@
 
 ## Image Acquisition Workflow
 
-### Current Process (Manual)
-1. Find image on Wikimedia/NASA/etc
-2. Copy direct thumbnail URL (800px)
-3. Add to pages array with license info
-4. Test in browser
-5. If broken, try Unsplash or generate
+See `CLAUDE.md` for full agent instructions.
 
-### Ideal Process (To Build)
-1. Curate concept list per book
-2. For each concept:
-   - Search sources (NASA, Wikimedia, NIH)
-   - If no good match → generate with AI
-3. Download all images locally
-4. Reference local paths (no external URL breakage)
-5. Auto-generate credits from metadata
+### Infrastructure (Done)
+- [x] `assets/` directory structure created
+- [x] `assets/manifest.json` for tracking metadata
+- [x] `.gitignore` updated (images local-only, manifest committed)
+- [x] `CLAUDE.md` documents the workflow
+
+### Process
+1. WebSearch for Wikimedia/NASA/public domain images
+2. Use `curl` to fetch page (WebFetch blocked by Wikipedia)
+3. Validate license (PD, CC0, CC-BY, CC-BY-SA)
+4. Download to `assets/{book}/{word}.jpg`
+5. Update `manifest.json` with metadata
+6. Fallback: MuleRouter AI generation
+
+### Production Hosting
+- [ ] Set up Vercel Blob for image hosting
+- [ ] Update HTML to use Blob URLs in production
 
 ---
 
@@ -121,3 +125,5 @@
 - [x] Book 2 arc restructure (Patterns first)
 - [x] Book 2 detailed credits
 - [x] Session notes updated
+- [x] Image acquisition agent workflow (CLAUDE.md)
+- [x] Local assets infrastructure (assets/, manifest.json, .gitignore)

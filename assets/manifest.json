@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "generated": "2026-01-15",
+  "images": {
+    "book2/honeycomb": {
+      "localPath": "assets/book2/honeycomb.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Honey_Bees_and_Honeycomb.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Western_Honey_Bees_and_Honeycomb.JPG/800px-Western_Honey_Bees_and_Honeycomb.JPG",
+      "license": {
+        "type": "CC BY 3.0",
+        "attribution": "Healthnutlady / Wikimedia Commons",
+        "attributionRequired": true,
+        "url": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-15"
+    },
+    "book2/ripples": {
+      "localPath": "assets/book2/ripples.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripple_effect_on_water.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ripple_effect_on_water.jpg/800px-Ripple_effect_on_water.jpg",
+      "license": {
+        "type": "CC BY 2.0",
+        "attribution": "Sergiu Bacioiu / Flickr",
+        "attributionRequired": true,
+        "url": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-15"
+    },
+    "book2/web": {
+      "localPath": "assets/book2/web.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spider_web_with_dew.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Spider_web_with_dew.JPG/800px-Spider_web_with_dew.JPG",
+      "license": {
+        "type": "CC0",
+        "attribution": "TGoeller / Wikimedia Commons",
+        "attributionRequired": false,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-15"
+    },
+    "book2/cell": {
+      "localPath": "assets/book2/cell.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Actin_Filaments_in_a_Neuroblastoma_cell_Line.png/800px-Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
+      "license": {
+        "type": "CC BY 4.0",
+        "attribution": "Howard Vindin / Wikimedia Commons",
+        "attributionRequired": true,
+        "url": "https://creativecommons.org/licenses/by/4.0"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-15"
+    },
+    "book2/neuron": {
+      "localPath": "assets/book2/neuron.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GFP_Neurons.png",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GFP_Neurons.png/800px-GFP_Neurons.png",
+      "license": {
+        "type": "CC BY-SA 4.0",
+        "attribution": "ManuelSchottdorf / Wikimedia Commons",
+        "attributionRequired": true,
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-15"
+    }
+  }
+}
