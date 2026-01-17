@@ -195,24 +195,24 @@
       { word: "Introduction", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800", category: "Intro", isIntro: true },
       // BRIGHT
       { word: "Sun", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/800px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg", category: "Bright" },
-      { word: "Lightning", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg/960px-Summer_lightning_storm_over_the_City_of_Kamloops%2C_BC_%2819414087284%29.jpg", category: "Bright" },
+      { word: "Lightning", image: "assets/book1/lightning.jpg", category: "Bright", license: "Public Domain, NASA/ISS" },
       { word: "Rainbow", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Double-alaskan-rainbow.jpg/800px-Double-alaskan-rainbow.jpg", category: "Bright" },
-      { word: "Aurora", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Polarlicht_2.jpg/800px-Polarlicht_2.jpg", category: "Bright" },
+      { word: "Aurora", image: "assets/book1/aurora.jpg", category: "Bright", license: "Public Domain, NASA/ISS" },
       // COOL
       { word: "Stars", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/800px-ESO-VLT-Laser-phot-33a-07.jpg", category: "Cool" },
       { word: "Moon", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/800px-FullMoon2010.jpg", category: "Cool" },
-      { word: "Earth", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/800px-The_Blue_Marble_%28remastered%29.jpg", category: "Cool" },
+      { word: "Earth", image: "assets/book1/earth.jpg", category: "Cool", license: "Public Domain, NASA/NPP Blue Marble" },
       { word: "Ocean", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Clouds_over_the_Atlantic_Ocean.jpg/800px-Clouds_over_the_Atlantic_Ocean.jpg", category: "Cool" },
-      { word: "Glacier", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG/800px-Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG", category: "Cool" },
+      { word: "Glacier", image: "assets/book1/glacier.jpg", category: "Cool", license: "Public Domain, NASA" },
       { word: "Jellyfish", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/800px-Jelly_cc11.jpg", category: "Cool" },
       { word: "Crystal", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Quartz%2C_Tibet.jpg/800px-Quartz%2C_Tibet.jpg", category: "Cool" },
       { word: "Peacock", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peacock_Plumage.jpg/800px-Peacock_Plumage.jpg", category: "Cool" },
-      { word: "Butterfly", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Morpho_menelaus_huebneri_MHNT_Male_dos.jpg/800px-Morpho_menelaus_huebneri_MHNT_Male_dos.jpg", category: "Cool" },
-      { word: "Camouflage", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Camouflage_DSC05765.JPG/800px-Camouflage_DSC05765.JPG", category: "Cool" },
+      { word: "Butterfly", image: "assets/book1/butterfly.jpg", category: "Cool", license: "CC BY-SA 3.0, Didier Descouens" },
+      { word: "Camouflage", image: "assets/book1/camouflage.jpg", category: "Cool", license: "Public Domain, NOAA" },
       // WARM
-      { word: "Coral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Coral_reef_at_palmyra.jpg/800px-Coral_reef_at_palmyra.jpg", category: "Warm" },
-      { word: "Lava", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Pahoehoe_toe.jpg/800px-Pahoehoe_toe.jpg", category: "Warm" },
-      { word: "Eclipse", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Solar_eclipse_1999_4_NR.jpg/800px-Solar_eclipse_1999_4_NR.jpg", category: "Warm" },
+      { word: "Coral", image: "assets/book1/coral.jpg", category: "Warm", license: "Public Domain, NASA" },
+      { word: "Lava", image: "assets/book1/lava.jpg", category: "Warm", license: "Public Domain, NASA" },
+      { word: "Eclipse", image: "assets/book1/eclipse.jpg", category: "Warm", license: "Public Domain, NASA" },
       { word: "Credits", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg", category: "Credits", isCredits: true },
     ];
 
@@ -305,6 +305,17 @@
       exportArea.value = text;
     }
 
+    function getCreditsHTML() {
+      const contentPages = pages.filter(p => !p.isTitle && !p.isIntro && !p.isCredits && p.license);
+      let html = '<div style="text-align:left;font-size:0.55rem;line-height:1.6;padding:0.5rem;max-height:80%;overflow-y:auto;">';
+      html += '<div style="font-size:0.75rem;font-weight:bold;margin-bottom:0.5rem;text-align:center;">Image Credits</div>';
+      contentPages.forEach((pg) => {
+        html += `<div><b>${pg.word}</b>: ${pg.license}</div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+
     document.getElementById('thumbUp').onclick = () => {
       const fb = getFeedback(currentPage);
       const newRating = fb.rating === 'up' ? null : 'up';
@@ -356,7 +367,7 @@
       } else if (p.isIntro) {
         contentEl.innerHTML = `<div class="page-word" style="font-size:clamp(1.2rem,6vw,2rem);margin-bottom:0.5rem">${bookIntro}</div><div class="page-body">${bookDesc}</div>`;
       } else if (p.isCredits) {
-        contentEl.innerHTML = `<div class="page-word" style="font-size:clamp(1rem,4vw,1.5rem)">Credits</div><div class="page-body">Images: NASA, ESA, Wikimedia Commons</div>`;
+        contentEl.innerHTML = getCreditsHTML();
       } else {
         contentEl.innerHTML = `<div class="page-word">${p.word}</div>`;
       }
