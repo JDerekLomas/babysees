@@ -1,7 +1,61 @@
 {
   "version": "1.0",
-  "generated": "2026-01-15",
+  "generated": "2026-01-18",
   "images": {
+    "book1/lightning": {
+      "localPath": "assets/book1/lightning.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss028e005293",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/aurora": {
+      "localPath": "assets/book1/aurora.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss072e159172",
+      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/earth": {
+      "localPath": "assets/book1/earth.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001386",
+      "license": { "type": "Public Domain", "attribution": "NASA/NPP Blue Marble", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/glacier": {
+      "localPath": "assets/book1/glacier.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA17283",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/butterfly": {
+      "localPath": "assets/book1/butterfly.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morpho_didius_Male_Dos_MHNT.jpg",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Didier Descouens / Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia"
+    },
+    "book1/camouflage": {
+      "localPath": "assets/book1/camouflage.jpg",
+      "sourceUrl": "https://www.noaa.gov/",
+      "license": { "type": "Public Domain", "attribution": "NOAA", "attributionRequired": false },
+      "source": "noaa"
+    },
+    "book1/coral": {
+      "localPath": "assets/book1/coral.jpg",
+      "sourceUrl": "https://images.nasa.gov/",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/lava": {
+      "localPath": "assets/book1/lava.jpg",
+      "sourceUrl": "https://images.nasa.gov/",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
+    "book1/eclipse": {
+      "localPath": "assets/book1/eclipse.jpg",
+      "sourceUrl": "https://images.nasa.gov/",
+      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "source": "nasa"
+    },
     "book2/honeycomb": {
       "localPath": "assets/book2/honeycomb.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Honey_Bees_and_Honeycomb.JPG",
@@ -139,6 +193,252 @@
       "license": { "type": "Public Domain", "attribution": "NIAID/NIH", "attributionRequired": false },
       "source": "niaid",
       "note": "SARS-CoV-2 colorized transmission electron micrograph"
+    },
+    "book2/pinecone": {
+      "localPath": "assets/book2/pinecone.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cone_Pinus_pinea_01.jpg",
+      "license": { "type": "CC BY 4.0", "attribution": "Kateryna Martyniuk / Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia",
+      "note": "Italian Stone Pine cone showing Fibonacci spiral"
+    },
+    "book2/treerings": {
+      "localPath": "assets/book2/treerings.jpg",
+      "sourceUrl": "https://www.usgs.gov/media/images/tree-ring-cross-section",
+      "license": { "type": "Public Domain", "attribution": "USGS", "attributionRequired": false },
+      "source": "usgs",
+      "note": "Tree-ring cross-section from southern Colorado"
+    },
+    "book2/lichen": {
+      "localPath": "assets/book2/lichen.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cladonia_cristatella_EPA.jpg",
+      "license": { "type": "Public Domain", "attribution": "EPA", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "British Soldiers Lichen (Cladonia cristatella)"
+    },
+    "book2/dragonfly": {
+      "localPath": "assets/book2/dragonfly.jpg",
+      "sourceUrl": "https://pxhere.com/en/photo/1093979",
+      "license": { "type": "CC0", "attribution": "PxHere", "attributionRequired": false },
+      "source": "pxhere",
+      "note": "Dragonfly wing macro showing intricate vein patterns"
+    },
+    "book2/diatoms": {
+      "localPath": "assets/book2/diatoms.jpg",
+      "sourceUrl": "https://www.usgs.gov/media/images/scanning-electron-microscope-sem-images-fossilized-diatom-phytoplankton-specimens",
+      "license": { "type": "Public Domain", "attribution": "USGS", "attributionRequired": false },
+      "source": "usgs",
+      "note": "SEM images of fossilized diatom phytoplankton"
+    },
+    "book2/radiolaria": {
+      "localPath": "assets/book2/radiolaria.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haeckel_Stephoidea.jpg",
+      "license": { "type": "Public Domain", "attribution": "Ernst Haeckel (1834-1919)", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Radiolaria from Kunstformen der Natur (1904)"
+    },
+    "book2/braincoral": {
+      "localPath": "assets/book2/braincoral.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diploria_labyrinthiformis_384402865.jpg",
+      "license": { "type": "CC BY 4.0", "attribution": "iNaturalist / Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia",
+      "note": "Grooved Brain Coral (Diploria labyrinthiformis)"
+    },
+    "book2/fingerprint": {
+      "localPath": "assets/book2/fingerprint.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fingerprint.svg",
+      "license": { "type": "Public Domain", "attribution": "Jorge Stolfi", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Vector illustration of fingerprint ridge patterns"
+    },
+    "book2/solarflare": {
+      "localPath": "assets/book2/solarflare.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA21949",
+      "license": { "type": "Public Domain", "attribution": "NASA/JPL", "attributionRequired": false },
+      "source": "nasa",
+      "note": "X9.3 solar flare - largest of the decade (Sept 2017)"
+    },
+    "book2/asteroid": {
+      "localPath": "assets/book2/asteroid.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA15351",
+      "license": { "type": "Public Domain", "attribution": "NASA/JPL Dawn Mission", "attributionRequired": false },
+      "source": "nasa",
+      "note": "Vesta asteroid surface at high resolution"
+    },
+    "book2/tessellation": {
+      "localPath": "assets/book2/tessellation.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Penrose_Tiling_(Rhombi).svg",
+      "license": { "type": "Public Domain", "attribution": "Inductiveload", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Penrose tiling - aperiodic mathematical pattern"
+    },
+    "book2/islamic": {
+      "localPath": "assets/book2/islamic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arabesque_details_in_Alhambra_-_DSC07698.JPG",
+      "license": { "type": "CC0", "attribution": "Daderot / Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Islamic geometric pattern from Alhambra palace"
+    },
+    "book2/celticknot": {
+      "localPath": "assets/book2/celticknot.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Celtic-knot-insquare-39crossings.svg",
+      "license": { "type": "Public Domain", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Celtic knot with 39 crossings"
+    },
+    "book2/voronoi": {
+      "localPath": "assets/book2/voronoi.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Voronoi_diagram_(10_sites).svg",
+      "license": { "type": "CC0", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Voronoi diagram - mathematical cell pattern"
+    },
+    "book2/circuitboard": {
+      "localPath": "assets/book2/circuitboard.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_board,_believed_to_be_part_of_ABNER,_the_NSA%27s_first_digital_computer_designed_in_house,_delivered_1951_-_National_Cryptologic_Museum_-_DSC07665.JPG",
+      "license": { "type": "CC0", "attribution": "National Cryptologic Museum", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Historic circuit board from NSA's first digital computer (1951)"
+    },
+    "book2/geodesic": {
+      "localPath": "assets/book2/geodesic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eden_project.JPG",
+      "license": { "type": "Public Domain", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Eden Project geodesic dome biomes"
+    },
+    "book2/lace": {
+      "localPath": "assets/book2/lace.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lace_specimen_-_Lacis_Museum_of_Lace_and_Textiles_-_Berkeley,_CA_-_DSC04603.JPG",
+      "license": { "type": "CC0", "attribution": "Lacis Museum of Lace and Textiles", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Intricate lace textile pattern"
+    },
+    "book2/weave": {
+      "localPath": "assets/book2/weave.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Composite-weave_sandal,_Basket_Maker_II,_Kanab_Canyon,_Utah,_c._500_AD,_yucca_cordage_and_dye_-_Natural_History_Museum_of_Utah_-_DSC07391.JPG",
+      "license": { "type": "CC0", "attribution": "Natural History Museum of Utah", "attributionRequired": false },
+      "source": "wikimedia",
+      "note": "Ancient basket weave pattern (c. 500 AD)"
+    },
+    "book5/joy": {
+      "localPath": "assets/book5/joy.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing pure joy" }
+    },
+    "book5/amusement": {
+      "localPath": "assets/book5/amusement.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing amusement, laughing" }
+    },
+    "book5/wonder": {
+      "localPath": "assets/book5/wonder.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing wonder, eyes wide in amazement" }
+    },
+    "book5/fascination": {
+      "localPath": "assets/book5/fascination.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing fascination, intensely focused" }
+    },
+    "book5/excitement": {
+      "localPath": "assets/book5/excitement.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing excitement, bouncing with energy" }
+    },
+    "book5/gratitude": {
+      "localPath": "assets/book5/gratitude.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing gratitude, thankful smile" }
+    },
+    "book5/pride": {
+      "localPath": "assets/book5/pride.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing pride, confident posture" }
+    },
+    "book5/relief": {
+      "localPath": "assets/book5/relief.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing relief, tension releasing" }
+    },
+    "book5/tenderness": {
+      "localPath": "assets/book5/tenderness.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing tenderness, gentle caring expression" }
+    },
+    "book5/serenity": {
+      "localPath": "assets/book5/serenity.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing serenity, calm and peaceful" }
+    },
+    "book5/sadness": {
+      "localPath": "assets/book5/sadness.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing sadness, tears welling" }
+    },
+    "book5/anger": {
+      "localPath": "assets/book5/anger.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing anger, furrowed brow" }
+    },
+    "book5/fear": {
+      "localPath": "assets/book5/fear.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing fear, wide frightened eyes" }
+    },
+    "book5/worry": {
+      "localPath": "assets/book5/worry.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing worry, anxious concerned expression" }
+    },
+    "book5/confusion": {
+      "localPath": "assets/book5/confusion.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing confusion, puzzled frown" }
+    },
+    "book5/frustration": {
+      "localPath": "assets/book5/frustration.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing frustration, struggling with something" }
+    },
+    "book5/disappointment": {
+      "localPath": "assets/book5/disappointment.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing disappointment, let down expression" }
+    },
+    "book5/embarrassment": {
+      "localPath": "assets/book5/embarrassment.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing embarrassment, blushing and shy" }
+    },
+    "book5/loneliness": {
+      "localPath": "assets/book5/loneliness.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing loneliness, sitting alone" }
+    },
+    "book5/nervousness": {
+      "localPath": "assets/book5/nervousness.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing nervousness, fidgeting" }
     }
   }
 }

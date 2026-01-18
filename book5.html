@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>BabySees - What We Discover</title>
-  <meta name="description" content="Book 2: What We Discover. Microscopic worlds, patterns, and deep space.">
+  <title>BabySees - What We Feel Inside</title>
+  <meta name="description" content="Book 5: What We Feel Inside. Emotional granularity for toddlers - learning to name and understand our feelings.">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,8 +136,8 @@
     <header>
       <a href="index.html" class="logo">BABYSEES</a>
       <div class="header-center">
-        <span class="category" id="category">Microscopic</span>
-        <span class="progress"><span id="current">1</span>/<span id="total">20</span></span>
+        <span class="category" id="category">Emotions</span>
+        <span class="progress"><span id="current">1</span>/<span id="total">22</span></span>
       </div>
       <div class="mode-toggle">
         <button class="mode-btn active" id="readMode">Read</button>
@@ -184,57 +184,51 @@
   </div>
 
   <script>
-    const bookId = 'book2';
-    const bookTitle = "What We Discover";
-    const bookIntro = "Patterns Everywhere";
-    const bookDesc = "Spirals in shells. Hexagons in honeycombs. Stripes on zebras. The same patterns appear again and again—in tiny cells, in our own bodies, and across the vast cosmos.";
+    const bookId = 'book5';
+    const bookTitle = "What We Feel Inside";
+    const bookIntro = "Naming Our Feelings";
+    const bookDesc = "We feel so many things inside us. Happy, sad, scared, excited. When we can name our feelings, we understand ourselves better. These are the emotions that make us human.";
 
-    // Arc: Nature Patterns → Earth From Above → Human Patterns → Microscopic → Life → Space → Cosmos
+    // Pages organized by emotional valence: Positive -> Negative
     const pages = [
       // Title & Intro
-      { word: "BabySees", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/800px-NautilusCutawayLogarithmicSpiral.jpg", category: "Title", isTitle: true },
-      { word: "Introduction", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/800px-Mandel_zoom_00_mandelbrot_set.jpg", category: "Intro", isIntro: true },
-      // NATURE PATTERNS - Patterns in the natural world
-      { word: "Spiral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/960px-NautilusCutawayLogarithmicSpiral.jpg", category: "Nature", license: "Chris 73 / Wikimedia Commons, CC BY-SA 3.0" },
-      { word: "Snowflake", image: "assets/book2/snowflake.jpg", category: "Nature", license: "Wilson Bentley, Public Domain" },
-      { word: "Honeycomb", image: "assets/book2/honeycomb.jpg", category: "Nature", license: "CC BY 3.0, Healthnutlady / Wikimedia" },
-      { word: "Fern", image: "assets/book2/fern.jpg", category: "Nature", license: "Public Domain, The Ferns of South Africa (1892) / BHL" },
-      { word: "Web", image: "assets/book2/web.jpg", category: "Nature", license: "CC0, TGoeller / Wikimedia" },
-      { word: "Ripples", image: "assets/book2/ripples.jpg", category: "Nature", license: "CC BY 2.0, Sergiu Bacioiu / Flickr" },
-      { word: "Stripes", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/800px-Plains_Zebra_Equus_quagga.jpg", category: "Nature", license: "Muhammad Mahdi Karim, GFDL 1.2" },
-      // EARTH FROM ABOVE - Patterns seen from space
-      { word: "Dunes", image: "assets/book2/dunes.jpg", category: "Earth", license: "Public Domain, NASA/ISS" },
-      { word: "Delta", image: "assets/book2/delta.jpg", category: "Earth", license: "Public Domain, NASA/Terra" },
-      { word: "Canyon", image: "assets/book2/canyon.jpg", category: "Earth", license: "Public Domain, NASA/Terra" },
-      { word: "Hurricane", image: "assets/book2/hurricane.jpg", category: "Earth", license: "Public Domain, NASA/NOAA" },
-      { word: "Glacier", image: "assets/book2/glacier.jpg", category: "Earth", license: "Public Domain, NASA" },
-      { word: "Lava", image: "assets/book2/lava.jpg", category: "Earth", license: "Public Domain, NASA" },
-      { word: "Aurora", image: "assets/book2/aurora.jpg", category: "Earth", license: "Public Domain, NASA/ISS" },
-      { word: "Lightning", image: "assets/book2/lightning.jpg", category: "Earth", license: "Public Domain, NASA/ISS" },
-      // HUMAN PATTERNS - Patterns we create
-      { word: "Mandala", image: "assets/book2/mandala.jpg", category: "Human", license: "CC0, Flickr" },
-      { word: "Temple", image: "assets/book2/temple.jpg", category: "Human", license: "CC0, image-catalog / Flickr" },
-      { word: "Citylights", image: "assets/book2/citylights.jpg", category: "Human", license: "Public Domain, NASA/ISS" },
-      // MICROSCOPIC - Patterns at tiny scales
-      { word: "Pollen", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/800px-Misc_pollen.jpg", category: "Tiny", license: "Dartmouth College, Public Domain" },
-      { word: "Cell", image: "assets/book2/cell.png", category: "Tiny", license: "CC BY 4.0, Howard Vindin / Wikimedia" },
-      { word: "Bacteria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/800px-E._coli_Bacteria_%287316101966%29.jpg", category: "Tiny", license: "NIAID, CC BY 2.0" },
-      { word: "Virus", image: "assets/book2/virus.jpg", category: "Tiny", license: "Public Domain, NIAID/NIH" },
-      // INSIDE US - Building blocks of life
-      { word: "DNA", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/800px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png", category: "Life", license: "Zephyris, CC BY-SA 3.0" },
-      { word: "Neuron", image: "assets/book2/neuron_pd.jpg", category: "Life", license: "Public Domain, Cell Image Library" },
-      // SOLAR SYSTEM - Our cosmic neighborhood
-      { word: "Earth", image: "assets/book2/earth.jpg", category: "Space", license: "Public Domain, NASA/NPP Blue Marble" },
-      { word: "Crater", image: "assets/book2/crater.jpg", category: "Space", license: "Public Domain, NASA/JPL-Caltech" },
-      { word: "Saturn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg", category: "Space", license: "NASA/JPL/SSI, Public Domain" },
-      { word: "Jupiter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/800px-Jupiter_New_Horizons.jpg", category: "Space", license: "NASA/Johns Hopkins APL, Public Domain" },
-      // DEEP SPACE - The ultimate scale
-      { word: "Milkyway", image: "assets/book2/milkyway.jpg", category: "Cosmos", license: "Public Domain, NASA/Spitzer" },
-      { word: "Galaxy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/800px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", category: "Cosmos", license: "Adam Evans, CC BY 2.0" },
-      { word: "Nebula", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg", category: "Cosmos", license: "NASA/ESA/Hubble, Public Domain" },
-      { word: "Cosmos", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/799px-HubbleDeepField.800px.jpg", category: "Cosmos", license: "NASA/ESA/STScI, Public Domain" },
+      { word: "BabySees", image: "assets/book5/joy.png", category: "Title", isTitle: true },
+      { word: "Introduction", image: "assets/book5/wonder.png", category: "Intro", isIntro: true },
+
+      // POSITIVE EMOTIONS - High Energy
+      { word: "Joy", image: "assets/book5/joy.png", category: "Happy", license: "AI Generated with Wan2.5" },
+      { word: "Amusement", image: "assets/book5/amusement.png", category: "Happy", license: "AI Generated with Wan2.5" },
+      { word: "Excitement", image: "assets/book5/excitement.png", category: "Happy", license: "AI Generated with Wan2.5" },
+      { word: "Wonder", image: "assets/book5/wonder.png", category: "Curious", license: "AI Generated with Wan2.5" },
+      { word: "Fascination", image: "assets/book5/fascination.png", category: "Curious", license: "AI Generated with Wan2.5" },
+
+      // POSITIVE EMOTIONS - Gentle
+      { word: "Gratitude", image: "assets/book5/gratitude.png", category: "Warm", license: "AI Generated with Wan2.5" },
+      { word: "Pride", image: "assets/book5/pride.png", category: "Warm", license: "AI Generated with Wan2.5" },
+      { word: "Tenderness", image: "assets/book5/tenderness.png", category: "Warm", license: "AI Generated with Wan2.5" },
+      { word: "Relief", image: "assets/book5/relief.png", category: "Calm", license: "AI Generated with Wan2.5" },
+      { word: "Serenity", image: "assets/book5/serenity.png", category: "Calm", license: "AI Generated with Wan2.5" },
+
+      // NEGATIVE EMOTIONS - Fear Family
+      { word: "Fear", image: "assets/book5/fear.png", category: "Scared", license: "AI Generated with Wan2.5" },
+      { word: "Worry", image: "assets/book5/worry.png", category: "Scared", license: "AI Generated with Wan2.5" },
+      { word: "Nervousness", image: "assets/book5/nervousness.png", category: "Scared", license: "AI Generated with Wan2.5" },
+
+      // NEGATIVE EMOTIONS - Anger Family
+      { word: "Anger", image: "assets/book5/anger.png", category: "Mad", license: "AI Generated with Wan2.5" },
+      { word: "Frustration", image: "assets/book5/frustration.png", category: "Mad", license: "AI Generated with Wan2.5" },
+
+      // NEGATIVE EMOTIONS - Sadness Family
+      { word: "Sadness", image: "assets/book5/sadness.png", category: "Sad", license: "AI Generated with Wan2.5" },
+      { word: "Disappointment", image: "assets/book5/disappointment.png", category: "Sad", license: "AI Generated with Wan2.5" },
+      { word: "Loneliness", image: "assets/book5/loneliness.png", category: "Sad", license: "AI Generated with Wan2.5" },
+
+      // NEGATIVE EMOTIONS - Self-Conscious
+      { word: "Embarrassment", image: "assets/book5/embarrassment.png", category: "Shy", license: "AI Generated with Wan2.5" },
+      { word: "Confusion", image: "assets/book5/confusion.png", category: "Unsure", license: "AI Generated with Wan2.5" },
+
       // Credits
-      { word: "Credits", image: "assets/book2/milkyway.jpg", category: "Credits", isCredits: true },
+      { word: "Credits", image: "assets/book5/serenity.png", category: "Credits", isCredits: true },
     ];
 
     const feedback = {};
@@ -327,12 +321,10 @@
     }
 
     function getCreditsHTML() {
-      const contentPages = pages.filter(p => !p.isTitle && !p.isIntro && !p.isCredits && p.license);
       let html = '<div style="text-align:left;font-size:0.6rem;line-height:1.8;padding:0.5rem;max-height:80%;overflow-y:auto;">';
       html += '<div style="font-size:0.8rem;font-weight:bold;margin-bottom:0.5rem;text-align:center;">Image Credits</div>';
-      contentPages.forEach((pg) => {
-        html += `<div><b>${pg.word}</b>: ${pg.license}</div>`;
-      });
+      html += '<div style="text-align:center;margin-bottom:0.5rem;">All emotion images AI-generated with Wan2.5</div>';
+      html += '<div style="text-align:center;font-size:0.5rem;color:#888;">Based on Emotion Typology by Delft Institute of Positive Design</div>';
       html += '</div>';
       return html;
     }

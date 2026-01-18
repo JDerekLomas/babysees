@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-Visual vocabulary picture book for toddlers featuring high-contrast imagery. 4 books, ~20 pages each, deployed on Vercel.
+Visual vocabulary picture book for toddlers featuring complex visual shapes paired with associated concepts. The idea is to expose young children to visually rich, intricate imagery—honeycombs, fractals, nebulae, microscopic structures, ferns, mandalas—rather than just simple shapes, helping them appreciate complexity while learning vocabulary.
+
+4 books, ~20 pages each, deployed on Vercel.
 
 ## Image Acquisition Workflow
 
