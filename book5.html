@@ -190,6 +190,7 @@
     const bookDesc = "We feel so many things inside us. Happy, sad, scared, excited. When we can name our feelings, we understand ourselves better. These are the emotions that make us human.";
 
     // Pages organized by emotional valence: Positive -> Negative
+    // Based on Emotion Typology (emotiontypology.com) for emotional granularity
     const pages = [
       // Title & Intro
       { word: "BabySees", image: "assets/book5/joy.png", category: "Title", isTitle: true },
@@ -199,32 +200,50 @@
       { word: "Joy", image: "assets/book5/joy.png", category: "Happy", license: "AI Generated with Wan2.5" },
       { word: "Amusement", image: "assets/book5/amusement.png", category: "Happy", license: "AI Generated with Wan2.5" },
       { word: "Excitement", image: "assets/book5/excitement.png", category: "Happy", license: "AI Generated with Wan2.5" },
+      { word: "Surprise", image: "assets/book5/surprise.png", category: "Happy", license: "AI Generated with Wan2.5" },
+
+      // POSITIVE EMOTIONS - Curiosity & Wonder
       { word: "Wonder", image: "assets/book5/wonder.png", category: "Curious", license: "AI Generated with Wan2.5" },
       { word: "Fascination", image: "assets/book5/fascination.png", category: "Curious", license: "AI Generated with Wan2.5" },
+      { word: "Awe", image: "assets/book5/awe.png", category: "Curious", license: "AI Generated with Wan2.5" },
 
-      // POSITIVE EMOTIONS - Gentle
+      // POSITIVE EMOTIONS - Connection & Love
+      { word: "Affection", image: "assets/book5/affection.png", category: "Love", license: "AI Generated with Wan2.5" },
+      { word: "Tenderness", image: "assets/book5/tenderness.png", category: "Love", license: "AI Generated with Wan2.5" },
       { word: "Gratitude", image: "assets/book5/gratitude.png", category: "Warm", license: "AI Generated with Wan2.5" },
-      { word: "Pride", image: "assets/book5/pride.png", category: "Warm", license: "AI Generated with Wan2.5" },
-      { word: "Tenderness", image: "assets/book5/tenderness.png", category: "Warm", license: "AI Generated with Wan2.5" },
+
+      // POSITIVE EMOTIONS - Achievement & Calm
+      { word: "Pride", image: "assets/book5/pride.png", category: "Proud", license: "AI Generated with Wan2.5" },
+      { word: "Satisfaction", image: "assets/book5/satisfaction.png", category: "Proud", license: "AI Generated with Wan2.5" },
+      { word: "Determination", image: "assets/book5/determination.png", category: "Strong", license: "AI Generated with Wan2.5" },
+      { word: "Hope", image: "assets/book5/hope.png", category: "Hopeful", license: "AI Generated with Wan2.5" },
       { word: "Relief", image: "assets/book5/relief.png", category: "Calm", license: "AI Generated with Wan2.5" },
       { word: "Serenity", image: "assets/book5/serenity.png", category: "Calm", license: "AI Generated with Wan2.5" },
 
       // NEGATIVE EMOTIONS - Fear Family
       { word: "Fear", image: "assets/book5/fear.png", category: "Scared", license: "AI Generated with Wan2.5" },
       { word: "Worry", image: "assets/book5/worry.png", category: "Scared", license: "AI Generated with Wan2.5" },
+      { word: "Anxiety", image: "assets/book5/anxiety.png", category: "Scared", license: "AI Generated with Wan2.5" },
       { word: "Nervousness", image: "assets/book5/nervousness.png", category: "Scared", license: "AI Generated with Wan2.5" },
 
       // NEGATIVE EMOTIONS - Anger Family
       { word: "Anger", image: "assets/book5/anger.png", category: "Mad", license: "AI Generated with Wan2.5" },
       { word: "Frustration", image: "assets/book5/frustration.png", category: "Mad", license: "AI Generated with Wan2.5" },
+      { word: "Disgust", image: "assets/book5/disgust.png", category: "Mad", license: "AI Generated with Wan2.5" },
 
       // NEGATIVE EMOTIONS - Sadness Family
       { word: "Sadness", image: "assets/book5/sadness.png", category: "Sad", license: "AI Generated with Wan2.5" },
       { word: "Disappointment", image: "assets/book5/disappointment.png", category: "Sad", license: "AI Generated with Wan2.5" },
       { word: "Loneliness", image: "assets/book5/loneliness.png", category: "Sad", license: "AI Generated with Wan2.5" },
+      { word: "Boredom", image: "assets/book5/boredom.png", category: "Sad", license: "AI Generated with Wan2.5" },
 
       // NEGATIVE EMOTIONS - Self-Conscious
       { word: "Embarrassment", image: "assets/book5/embarrassment.png", category: "Shy", license: "AI Generated with Wan2.5" },
+      { word: "Shame", image: "assets/book5/shame.png", category: "Shy", license: "AI Generated with Wan2.5" },
+      { word: "Guilt", image: "assets/book5/guilt.png", category: "Shy", license: "AI Generated with Wan2.5" },
+
+      // NEGATIVE EMOTIONS - Comparison & Confusion
+      { word: "Jealousy", image: "assets/book5/jealousy.png", category: "Envious", license: "AI Generated with Wan2.5" },
       { word: "Confusion", image: "assets/book5/confusion.png", category: "Unsure", license: "AI Generated with Wan2.5" },
 
       // Credits

@@ -439,6 +439,78 @@
       "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
       "source": "ai-generated",
       "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing nervousness, fidgeting" }
+    },
+    "book5/hope": {
+      "localPath": "assets/book5/hope.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing hope, looking upward optimistically" }
+    },
+    "book5/awe": {
+      "localPath": "assets/book5/awe.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing awe, overwhelmed by beauty" }
+    },
+    "book5/affection": {
+      "localPath": "assets/book5/affection.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing affection, warm loving smile" }
+    },
+    "book5/satisfaction": {
+      "localPath": "assets/book5/satisfaction.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing satisfaction, content pleased expression" }
+    },
+    "book5/determination": {
+      "localPath": "assets/book5/determination.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing determination, focused serious face" }
+    },
+    "book5/surprise": {
+      "localPath": "assets/book5/surprise.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing surprise, eyebrows raised, mouth open" }
+    },
+    "book5/disgust": {
+      "localPath": "assets/book5/disgust.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing disgust, nose wrinkled in revulsion" }
+    },
+    "book5/jealousy": {
+      "localPath": "assets/book5/jealousy.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing jealousy, envious sideways glance" }
+    },
+    "book5/guilt": {
+      "localPath": "assets/book5/guilt.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing guilt, looking down ashamed" }
+    },
+    "book5/shame": {
+      "localPath": "assets/book5/shame.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing shame, head bowed, wants to hide" }
+    },
+    "book5/boredom": {
+      "localPath": "assets/book5/boredom.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing boredom, chin on hand, uninterested" }
+    },
+    "book5/anxiety": {
+      "localPath": "assets/book5/anxiety.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing anxiety, wide worried eyes, tense" }
     }
   }
 }
