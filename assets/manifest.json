@@ -57,35 +57,34 @@
       "source": "nasa"
     },
     "book2/honeycomb": {
-      "localPath": "assets/book2/honeycomb.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Honey_Bees_and_Honeycomb.JPG",
-      "license": { "type": "CC BY 3.0", "attribution": "Healthnutlady / Wikimedia Commons", "attributionRequired": true },
-      "source": "wikimedia"
+      "localPath": "assets/book2/honeycomb_ai.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Honeycomb macro photography, hexagonal pattern, golden amber color, perfect geometric cells, dramatic lighting, high contrast, nature's mathematics" }
     },
     "book2/ripples": {
-      "localPath": "assets/book2/ripples.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripple_effect_on_water.jpg",
-      "license": { "type": "CC BY 2.0", "attribution": "Sergiu Bacioiu / Flickr", "attributionRequired": true },
-      "source": "wikimedia"
+      "localPath": "assets/book2/ripples_ai.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Water ripples: concentric circles expanding on calm water surface, high contrast black and white, dramatic lighting, macro photography style, perfect circles radiating outward, zen aesthetic, minimalist" }
     },
     "book2/web": {
-      "localPath": "assets/book2/web.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spider_web_with_dew.JPG",
-      "license": { "type": "CC0", "attribution": "TGoeller / Wikimedia Commons", "attributionRequired": false },
-      "source": "wikimedia"
+      "localPath": "assets/book2/web_ai.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Spider web with morning dew drops, intricate geometric pattern, perfect symmetry, backlit with golden sunlight, macro photography, high contrast, nature's mathematics, stunning detail, black background" }
     },
     "book2/cell": {
-      "localPath": "assets/book2/cell.png",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
-      "license": { "type": "CC BY 4.0", "attribution": "Howard Vindin / Wikimedia Commons", "attributionRequired": true },
-      "source": "wikimedia"
+      "localPath": "assets/book2/cell_ai.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Fluorescent microscopy of a biological cell, dramatic neon colors magenta cyan green, glowing organelles, dark background, high contrast, scientific visualization, stunning detail" }
     },
     "book2/neuron": {
-      "localPath": "assets/book2/neuron_pd.jpg",
-      "sourceUrl": "https://www.cellimagelibrary.org/images/214",
-      "license": { "type": "Public Domain", "attribution": "Cell Image Library", "attributionRequired": false },
-      "source": "cellimagelibrary",
-      "note": "Replaced CC-BY-SA image with PD alternative"
+      "localPath": "assets/book2/neuron_ai.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Neuron with glowing dendrites and axon, fluorescent microscopy style, bright cyan and magenta colors against dark background, intricate branching patterns, scientific visualization, high contrast" }
     },
     "book2/dunes": {
       "localPath": "assets/book2/dunes.jpg",
