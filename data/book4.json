@@ -1,0 +1,30 @@
+{
+  "bookId": "book4",
+  "bookTitle": "What We Feel",
+  "bookIntro": "Closest to Our Hearts",
+  "bookDesc": "Some things we cannot photograph but only feel. The warmth of love, the spark of wonder, the magic of imagination. These are the feelings that make us human.",
+  "htmlTitle": "BabySees - What We Feel",
+  "htmlDescription": "Book 4: What We Feel. Love, wonder, magic, and the feelings that make us human.",
+  "credits": "Images: AI Generated with MuleRouter/Wan2.6",
+  "pages": [
+    { "word": "BabySees", "image": "assets/book4/joy.png", "category": "Title", "isTitle": true },
+    { "word": "Introduction", "image": "assets/book4/wonder.png", "category": "Introduction", "isIntro": true },
+    { "word": "Joy", "image": "assets/book4/joy.png", "category": "Bright" },
+    { "word": "Laughter", "image": "assets/book4/laughter.png", "category": "Bright" },
+    { "word": "Wonder", "image": "assets/book4/wonder.png", "category": "Bright" },
+    { "word": "Curiosity", "image": "assets/book4/curiosity.png", "category": "Bright" },
+    { "word": "Science", "image": "assets/book4/science.png", "category": "Bright" },
+    { "word": "Magic", "image": "assets/book4/magic.png", "category": "Cool" },
+    { "word": "Dream", "image": "assets/book4/dream.png", "category": "Cool" },
+    { "word": "Story", "image": "assets/book4/story.png", "category": "Cool" },
+    { "word": "Music", "image": "assets/book4/music.png", "category": "Cool" },
+    { "word": "Dance", "image": "assets/book4/dance.png", "category": "Cool" },
+    { "word": "Peace", "image": "assets/book4/peace.png", "category": "Cool" },
+    { "word": "Warmth", "image": "assets/book4/warmth.png", "category": "Warm" },
+    { "word": "Home", "image": "assets/book4/home.png", "category": "Warm" },
+    { "word": "Family", "image": "assets/book4/family.png", "category": "Warm" },
+    { "word": "Love", "image": "assets/book4/love.png", "category": "Warm" },
+    { "word": "Hope", "image": "assets/book4/hope.png", "category": "Warm" },
+    { "word": "Credits", "image": "assets/book4/love.png", "category": "Credits", "isCredits": true }
+  ]
+}

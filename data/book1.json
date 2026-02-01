@@ -1,0 +1,31 @@
+{
+  "bookId": "book1",
+  "bookTitle": "What We See",
+  "bookIntro": "The World Around Us",
+  "bookDesc": "From the blazing sun to the glowing moon, from the depths of the ocean to the dance of the aurora. These are the wonders we see with our eyes every day.",
+  "htmlTitle": "BabySees - What We See",
+  "htmlDescription": "Book 1: What We See. Sun, moon, earth, and life.",
+  "credits": "auto",
+  "pages": [
+    { "word": "BabySees", "image": "assets/book1/babysees.jpg", "category": "Title", "isTitle": true },
+    { "word": "Introduction", "image": "assets/book1/introduction.jpg", "category": "Intro", "isIntro": true },
+    { "word": "Sun", "image": "assets/book1/sun.jpg", "category": "Bright" },
+    { "word": "Lightning", "image": "assets/book1/lightning.jpg", "category": "Bright", "license": "Public Domain, NASA/ISS" },
+    { "word": "Rainbow", "image": "assets/book1/rainbow.jpg", "category": "Bright" },
+    { "word": "Aurora", "image": "assets/book1/aurora.jpg", "category": "Bright", "license": "Public Domain, NASA/ISS" },
+    { "word": "Stars", "image": "assets/book1/stars.jpg", "category": "Cool" },
+    { "word": "Moon", "image": "assets/book1/moon.jpg", "category": "Cool" },
+    { "word": "Earth", "image": "assets/book1/earth.jpg", "category": "Cool", "license": "Public Domain, NASA/NPP Blue Marble" },
+    { "word": "Ocean", "image": "assets/book1/ocean.jpg", "category": "Cool" },
+    { "word": "Glacier", "image": "assets/book1/glacier.jpg", "category": "Cool", "license": "Public Domain, NASA" },
+    { "word": "Jellyfish", "image": "assets/book1/jellyfish.jpg", "category": "Cool" },
+    { "word": "Crystal", "image": "assets/book1/crystal.jpg", "category": "Cool" },
+    { "word": "Peacock", "image": "assets/book1/peacock.jpg", "category": "Cool" },
+    { "word": "Butterfly", "image": "assets/book1/butterfly.jpg", "category": "Cool", "license": "Public Domain, NASA/ESA/Hubble" },
+    { "word": "Camouflage", "image": "assets/book1/camouflage.jpg", "category": "Cool", "license": "Public Domain, NOAA" },
+    { "word": "Coral", "image": "assets/book1/coral.jpg", "category": "Warm", "license": "Public Domain, NASA" },
+    { "word": "Lava", "image": "assets/book1/lava.jpg", "category": "Warm", "license": "Public Domain, NASA" },
+    { "word": "Eclipse", "image": "assets/book1/eclipse.jpg", "category": "Warm", "license": "Public Domain, NASA" },
+    { "word": "Credits", "image": "assets/book1/babysees.jpg", "category": "Credits", "isCredits": true }
+  ]
+}

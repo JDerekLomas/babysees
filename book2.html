@@ -192,16 +192,16 @@
     // Arc: Nature Patterns → Earth From Above → Human Patterns → Microscopic → Life → Space → Cosmos
     const pages = [
       // Title & Intro
-      { word: "BabySees", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/800px-NautilusCutawayLogarithmicSpiral.jpg", category: "Title", isTitle: true },
-      { word: "Introduction", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/800px-Mandel_zoom_00_mandelbrot_set.jpg", category: "Intro", isIntro: true },
+      { word: "BabySees", image: "assets/book2/babysees.jpg", category: "Title", isTitle: true },
+      { word: "Introduction", image: "assets/book2/introduction.jpg", category: "Intro", isIntro: true },
       // NATURE PATTERNS - Patterns in the natural world
-      { word: "Spiral", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NautilusCutawayLogarithmicSpiral.jpg/960px-NautilusCutawayLogarithmicSpiral.jpg", category: "Nature", license: "Chris 73 / Wikimedia Commons, CC BY-SA 3.0" },
+      { word: "Spiral", image: "assets/book2/spiral.jpg", category: "Nature", license: "NASA/Hubble, Public Domain" },
       { word: "Snowflake", image: "assets/book2/snowflake.jpg", category: "Nature", license: "Wilson Bentley, Public Domain" },
-      { word: "Honeycomb", image: "assets/book2/honeycomb_ai.png", category: "Nature", license: "AI Generated (Wan2.6)" },
+      { word: "Honeycomb", image: "assets/book2/honeycomb.jpg", category: "Nature", license: "CC BY 3.0, Healthnutlady / Wikimedia" },
       { word: "Fern", image: "assets/book2/fern.jpg", category: "Nature", license: "Public Domain, The Ferns of South Africa (1892) / BHL" },
-      { word: "Web", image: "assets/book2/web_ai.png", category: "Nature", license: "AI Generated (Wan2.6)" },
-      { word: "Ripples", image: "assets/book2/ripples_ai.png", category: "Nature", license: "AI Generated (Wan2.6)" },
-      { word: "Stripes", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/800px-Plains_Zebra_Equus_quagga.jpg", category: "Nature", license: "Muhammad Mahdi Karim, GFDL 1.2" },
+      { word: "Web", image: "assets/book2/web.jpg", category: "Nature", license: "CC0, TGoeller / Wikimedia" },
+      { word: "Ripples", image: "assets/book2/ripples.jpg", category: "Nature", license: "CC BY 2.0, Sergiu Bacioiu / Flickr" },
+      { word: "Stripes", image: "assets/book2/stripes.jpg", category: "Nature", license: "CC0, Pixabay / Wikimedia" },
       // EARTH FROM ABOVE - Patterns seen from space
       { word: "Dunes", image: "assets/book2/dunes.jpg", category: "Earth", license: "Public Domain, NASA/ISS" },
       { word: "Delta", image: "assets/book2/delta.jpg", category: "Earth", license: "Public Domain, NASA/Terra" },
@@ -216,23 +216,23 @@
       { word: "Temple", image: "assets/book2/temple.jpg", category: "Human", license: "CC0, image-catalog / Flickr" },
       { word: "Citylights", image: "assets/book2/citylights.jpg", category: "Human", license: "Public Domain, NASA/ISS" },
       // MICROSCOPIC - Patterns at tiny scales
-      { word: "Pollen", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/800px-Misc_pollen.jpg", category: "Tiny", license: "Dartmouth College, Public Domain" },
-      { word: "Cell", image: "assets/book2/cell_ai.png", category: "Tiny", license: "AI Generated (Wan2.6)" },
-      { word: "Bacteria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/E._coli_Bacteria_%287316101966%29.jpg/800px-E._coli_Bacteria_%287316101966%29.jpg", category: "Tiny", license: "NIAID, CC BY 2.0" },
+      { word: "Pollen", image: "assets/book2/pollen.jpg", category: "Tiny", license: "Dartmouth College, Public Domain" },
+      { word: "Cell", image: "assets/book2/cell.png", category: "Tiny", license: "CC BY 4.0, Howard Vindin / Wikimedia" },
+      { word: "Bacteria", image: "assets/book2/bacteria.jpg", category: "Tiny", license: "NIAID, CC BY 2.0" },
       { word: "Virus", image: "assets/book2/virus.jpg", category: "Tiny", license: "Public Domain, NIAID/NIH" },
       // INSIDE US - Building blocks of life
-      { word: "DNA", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/800px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png", category: "Life", license: "Zephyris, CC BY-SA 3.0" },
-      { word: "Neuron", image: "assets/book2/neuron_ai.png", category: "Life", license: "AI Generated (Wan2.6)" },
+      { word: "DNA", image: "assets/book2/dna.png", category: "Life", license: "Public Domain" },
+      { word: "Neuron", image: "assets/book2/neuron_pd.jpg", category: "Life", license: "Public Domain, Cell Image Library" },
       // SOLAR SYSTEM - Our cosmic neighborhood
       { word: "Earth", image: "assets/book2/earth.jpg", category: "Space", license: "Public Domain, NASA/NPP Blue Marble" },
       { word: "Crater", image: "assets/book2/crater.jpg", category: "Space", license: "Public Domain, NASA/JPL-Caltech" },
-      { word: "Saturn", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg", category: "Space", license: "NASA/JPL/SSI, Public Domain" },
-      { word: "Jupiter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/800px-Jupiter_New_Horizons.jpg", category: "Space", license: "NASA/Johns Hopkins APL, Public Domain" },
+      { word: "Saturn", image: "assets/book2/saturn.jpg", category: "Space", license: "NASA/JPL/SSI, Public Domain" },
+      { word: "Jupiter", image: "assets/book2/jupiter.jpg", category: "Space", license: "NASA/Johns Hopkins APL, Public Domain" },
       // DEEP SPACE - The ultimate scale
       { word: "Milkyway", image: "assets/book2/milkyway.jpg", category: "Cosmos", license: "Public Domain, NASA/Spitzer" },
-      { word: "Galaxy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/800px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", category: "Cosmos", license: "Adam Evans, CC BY 2.0" },
-      { word: "Nebula", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg", category: "Cosmos", license: "NASA/ESA/Hubble, Public Domain" },
-      { word: "Cosmos", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/799px-HubbleDeepField.800px.jpg", category: "Cosmos", license: "NASA/ESA/STScI, Public Domain" },
+      { word: "Galaxy", image: "assets/book2/galaxy.jpg", category: "Cosmos", license: "NASA/ESA/Hubble, Public Domain" },
+      { word: "Nebula", image: "assets/book2/nebula.jpg", category: "Cosmos", license: "NASA/ESA/Hubble, Public Domain" },
+      { word: "Cosmos", image: "assets/book2/cosmos.jpg", category: "Cosmos", license: "NASA/ESA/STScI, Public Domain" },
       // Credits
       { word: "Credits", image: "assets/book2/milkyway.jpg", category: "Credits", isCredits: true },
     ];

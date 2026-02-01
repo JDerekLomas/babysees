@@ -5,511 +5,1427 @@
     "book1/lightning": {
       "localPath": "assets/book1/lightning.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss028e005293",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book1/aurora": {
       "localPath": "assets/book1/aurora.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss072e159172",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book1/earth": {
       "localPath": "assets/book1/earth.jpg",
       "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001386",
-      "license": { "type": "Public Domain", "attribution": "NASA/NPP Blue Marble", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/NPP Blue Marble",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book1/glacier": {
       "localPath": "assets/book1/glacier.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA17283",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book1/butterfly": {
       "localPath": "assets/book1/butterfly.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morpho_didius_Male_Dos_MHNT.jpg",
-      "license": { "type": "CC BY-SA 3.0", "attribution": "Didier Descouens / Wikimedia Commons", "attributionRequired": true },
-      "source": "wikimedia"
+      "sourceUrl": "https://images.nasa.gov/details/PIA23121",
+      "thumbnailUrl": "http://images-assets.nasa.gov/image/PIA23121/PIA23121~medium.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ESA/Hubble",
+        "attributionRequired": false,
+        "url": "https://www.nasa.gov/multimedia/guidelines/index.html"
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
     },
     "book1/camouflage": {
       "localPath": "assets/book1/camouflage.jpg",
       "sourceUrl": "https://www.noaa.gov/",
-      "license": { "type": "Public Domain", "attribution": "NOAA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NOAA",
+        "attributionRequired": false
+      },
       "source": "noaa"
     },
     "book1/coral": {
       "localPath": "assets/book1/coral.jpg",
-      "sourceUrl": "https://images.nasa.gov/",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "sourceUrl": "https://images.nasa.gov/details/PIA25861",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book1/lava": {
       "localPath": "assets/book1/lava.jpg",
-      "sourceUrl": "https://images.nasa.gov/",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
-      "source": "nasa"
+      "sourceUrl": "https://images.nasa.gov/search?q=lava",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "note": "Exact NASA image ID unknown; original source URL was generic"
     },
     "book1/eclipse": {
       "localPath": "assets/book1/eclipse.jpg",
-      "sourceUrl": "https://images.nasa.gov/",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
-      "source": "nasa"
+      "sourceUrl": "https://images.nasa.gov/details/MAF_20240408_NOLAeclipse01",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "attribution": "Michael DeMocker / NASA MAF"
     },
     "book2/honeycomb": {
-      "localPath": "assets/book2/honeycomb_ai.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
-      "source": "ai-generated",
-      "generator": { "model": "wan2.6-t2i", "prompt": "Honeycomb macro photography, hexagonal pattern, golden amber color, perfect geometric cells, dramatic lighting, high contrast, nature's mathematics" }
+      "localPath": "assets/book2/honeycomb.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Honey_Bees_and_Honeycomb.JPG",
+      "license": {
+        "type": "CC BY 3.0",
+        "attribution": "Healthnutlady / Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia"
     },
     "book2/ripples": {
-      "localPath": "assets/book2/ripples_ai.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
-      "source": "ai-generated",
-      "generator": { "model": "wan2.6-t2i", "prompt": "Water ripples: concentric circles expanding on calm water surface, high contrast black and white, dramatic lighting, macro photography style, perfect circles radiating outward, zen aesthetic, minimalist" }
+      "localPath": "assets/book2/ripples.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripple_effect_on_water.jpg",
+      "license": {
+        "type": "CC BY 2.0",
+        "attribution": "Sergiu Bacioiu / Flickr",
+        "attributionRequired": true
+      },
+      "source": "wikimedia"
     },
     "book2/web": {
-      "localPath": "assets/book2/web_ai.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
-      "source": "ai-generated",
-      "generator": { "model": "wan2.6-t2i", "prompt": "Spider web with morning dew drops, intricate geometric pattern, perfect symmetry, backlit with golden sunlight, macro photography, high contrast, nature's mathematics, stunning detail, black background" }
+      "localPath": "assets/book2/web.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spider_web_with_dew.JPG",
+      "license": {
+        "type": "CC0",
+        "attribution": "TGoeller / Wikimedia Commons",
+        "attributionRequired": false
+      },
+      "source": "wikimedia"
     },
     "book2/cell": {
-      "localPath": "assets/book2/cell_ai.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
-      "source": "ai-generated",
-      "generator": { "model": "wan2.6-t2i", "prompt": "Fluorescent microscopy of a biological cell, dramatic neon colors magenta cyan green, glowing organelles, dark background, high contrast, scientific visualization, stunning detail" }
+      "localPath": "assets/book2/cell.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actin_Filaments_in_a_Neuroblastoma_cell_Line.png",
+      "license": {
+        "type": "CC BY 4.0",
+        "attribution": "Howard Vindin / Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia"
     },
     "book2/neuron": {
-      "localPath": "assets/book2/neuron_ai.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
-      "source": "ai-generated",
-      "generator": { "model": "wan2.6-t2i", "prompt": "Neuron with glowing dendrites and axon, fluorescent microscopy style, bright cyan and magenta colors against dark background, intricate branching patterns, scientific visualization, high contrast" }
+      "localPath": "assets/book2/neuron_pd.jpg",
+      "sourceUrl": "https://www.cellimagelibrary.org/images/214",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Cell Image Library",
+        "attributionRequired": false
+      },
+      "source": "cellimagelibrary",
+      "note": "Replaced CC-BY-SA image with PD alternative"
     },
     "book2/dunes": {
       "localPath": "assets/book2/dunes.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss030e174652",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/citylights": {
       "localPath": "assets/book2/citylights.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss040e091208",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/delta": {
       "localPath": "assets/book2/delta.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA03429",
-      "license": { "type": "Public Domain", "attribution": "NASA/Terra", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/Terra",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/lava": {
       "localPath": "assets/book2/lava.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA22459",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/snowflake": {
       "localPath": "assets/book2/snowflake.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:SnowflakesWilsonBentley.jpg",
-      "license": { "type": "Public Domain", "attribution": "Wilson Bentley (1865-1931)", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Wilson Bentley (1865-1931)",
+        "attributionRequired": false
+      },
       "source": "wikimedia"
     },
     "book2/aurora": {
       "localPath": "assets/book2/aurora.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss072e159172",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/canyon": {
       "localPath": "assets/book2/canyon.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA03402",
-      "license": { "type": "Public Domain", "attribution": "NASA/Terra", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/Terra",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/hurricane": {
       "localPath": "assets/book2/hurricane.jpg",
       "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000947",
-      "license": { "type": "Public Domain", "attribution": "NASA/NOAA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/NOAA",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/glacier": {
       "localPath": "assets/book2/glacier.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA17283",
-      "license": { "type": "Public Domain", "attribution": "NASA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/crater": {
       "localPath": "assets/book2/crater.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA24149",
-      "license": { "type": "Public Domain", "attribution": "NASA/JPL-Caltech", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL-Caltech",
+        "attributionRequired": false
+      },
       "source": "nasa",
       "note": "Mars volcano pit craters"
     },
     "book2/lightning": {
       "localPath": "assets/book2/lightning.jpg",
       "sourceUrl": "https://images.nasa.gov/details/iss073e0330560",
-      "license": { "type": "Public Domain", "attribution": "NASA/ISS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/earth": {
       "localPath": "assets/book2/earth.jpg",
       "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001386",
-      "license": { "type": "Public Domain", "attribution": "NASA/NPP Blue Marble", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/NPP Blue Marble",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/milkyway": {
       "localPath": "assets/book2/milkyway.jpg",
       "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000148",
-      "license": { "type": "Public Domain", "attribution": "NASA/Spitzer", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/Spitzer",
+        "attributionRequired": false
+      },
       "source": "nasa"
     },
     "book2/temple": {
       "localPath": "assets/book2/temple.jpg",
       "sourceUrl": "https://www.flickr.com/photos/image-catalog/19549855800/",
-      "license": { "type": "CC0", "attribution": "image-catalog / Flickr", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "image-catalog / Flickr",
+        "attributionRequired": false
+      },
       "source": "flickr",
       "note": "Angkor Wat, Cambodia"
     },
     "book2/mandala": {
       "localPath": "assets/book2/mandala.jpg",
       "sourceUrl": "https://www.flickr.com/photos/76937974@N03/7052543701/",
-      "license": { "type": "CC0", "attribution": "Flickr user", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "Flickr user",
+        "attributionRequired": false
+      },
       "source": "flickr",
       "note": "Blue mandala digital art"
     },
     "book2/fern": {
       "localPath": "assets/book2/fern.jpg",
       "sourceUrl": "https://www.biodiversitylibrary.org/page/51651660",
-      "license": { "type": "Public Domain", "attribution": "The Ferns of South Africa (1892) / BHL", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "The Ferns of South Africa (1892) / BHL",
+        "attributionRequired": false
+      },
       "source": "bhl",
       "note": "Vintage botanical illustration plate"
     },
     "book2/virus": {
       "localPath": "assets/book2/virus.jpg",
       "sourceUrl": "https://www.flickr.com/photos/niaid/49534865371/",
-      "license": { "type": "Public Domain", "attribution": "NIAID/NIH", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NIAID/NIH",
+        "attributionRequired": false
+      },
       "source": "niaid",
       "note": "SARS-CoV-2 colorized transmission electron micrograph"
     },
     "book2/pinecone": {
       "localPath": "assets/book2/pinecone.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cone_Pinus_pinea_01.jpg",
-      "license": { "type": "CC BY 4.0", "attribution": "Kateryna Martyniuk / Wikimedia Commons", "attributionRequired": true },
+      "license": {
+        "type": "CC BY 4.0",
+        "attribution": "Kateryna Martyniuk / Wikimedia Commons",
+        "attributionRequired": true
+      },
       "source": "wikimedia",
       "note": "Italian Stone Pine cone showing Fibonacci spiral"
     },
     "book2/treerings": {
       "localPath": "assets/book2/treerings.jpg",
       "sourceUrl": "https://www.usgs.gov/media/images/tree-ring-cross-section",
-      "license": { "type": "Public Domain", "attribution": "USGS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "USGS",
+        "attributionRequired": false
+      },
       "source": "usgs",
       "note": "Tree-ring cross-section from southern Colorado"
     },
     "book2/lichen": {
       "localPath": "assets/book2/lichen.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cladonia_cristatella_EPA.jpg",
-      "license": { "type": "Public Domain", "attribution": "EPA", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "EPA",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "British Soldiers Lichen (Cladonia cristatella)"
     },
     "book2/dragonfly": {
       "localPath": "assets/book2/dragonfly.jpg",
       "sourceUrl": "https://pxhere.com/en/photo/1093979",
-      "license": { "type": "CC0", "attribution": "PxHere", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "PxHere",
+        "attributionRequired": false
+      },
       "source": "pxhere",
       "note": "Dragonfly wing macro showing intricate vein patterns"
     },
     "book2/diatoms": {
       "localPath": "assets/book2/diatoms.jpg",
       "sourceUrl": "https://www.usgs.gov/media/images/scanning-electron-microscope-sem-images-fossilized-diatom-phytoplankton-specimens",
-      "license": { "type": "Public Domain", "attribution": "USGS", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "USGS",
+        "attributionRequired": false
+      },
       "source": "usgs",
       "note": "SEM images of fossilized diatom phytoplankton"
     },
     "book2/radiolaria": {
       "localPath": "assets/book2/radiolaria.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haeckel_Stephoidea.jpg",
-      "license": { "type": "Public Domain", "attribution": "Ernst Haeckel (1834-1919)", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Ernst Haeckel (1834-1919)",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Radiolaria from Kunstformen der Natur (1904)"
     },
     "book2/braincoral": {
       "localPath": "assets/book2/braincoral.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diploria_labyrinthiformis_384402865.jpg",
-      "license": { "type": "CC BY 4.0", "attribution": "iNaturalist / Wikimedia Commons", "attributionRequired": true },
+      "license": {
+        "type": "CC BY 4.0",
+        "attribution": "iNaturalist / Wikimedia Commons",
+        "attributionRequired": true
+      },
       "source": "wikimedia",
       "note": "Grooved Brain Coral (Diploria labyrinthiformis)"
     },
     "book2/fingerprint": {
       "localPath": "assets/book2/fingerprint.png",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fingerprint.svg",
-      "license": { "type": "Public Domain", "attribution": "Jorge Stolfi", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Jorge Stolfi",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Vector illustration of fingerprint ridge patterns"
     },
     "book2/solarflare": {
       "localPath": "assets/book2/solarflare.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA21949",
-      "license": { "type": "Public Domain", "attribution": "NASA/JPL", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL",
+        "attributionRequired": false
+      },
       "source": "nasa",
       "note": "X9.3 solar flare - largest of the decade (Sept 2017)"
     },
     "book2/asteroid": {
       "localPath": "assets/book2/asteroid.jpg",
       "sourceUrl": "https://images.nasa.gov/details/PIA15351",
-      "license": { "type": "Public Domain", "attribution": "NASA/JPL Dawn Mission", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL Dawn Mission",
+        "attributionRequired": false
+      },
       "source": "nasa",
       "note": "Vesta asteroid surface at high resolution"
     },
     "book2/tessellation": {
       "localPath": "assets/book2/tessellation.png",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Penrose_Tiling_(Rhombi).svg",
-      "license": { "type": "Public Domain", "attribution": "Inductiveload", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Inductiveload",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Penrose tiling - aperiodic mathematical pattern"
     },
     "book2/islamic": {
       "localPath": "assets/book2/islamic.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arabesque_details_in_Alhambra_-_DSC07698.JPG",
-      "license": { "type": "CC0", "attribution": "Daderot / Wikimedia Commons", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "Daderot / Wikimedia Commons",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Islamic geometric pattern from Alhambra palace"
     },
     "book2/celticknot": {
       "localPath": "assets/book2/celticknot.png",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Celtic-knot-insquare-39crossings.svg",
-      "license": { "type": "Public Domain", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Wikimedia Commons",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Celtic knot with 39 crossings"
     },
     "book2/voronoi": {
       "localPath": "assets/book2/voronoi.png",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Voronoi_diagram_(10_sites).svg",
-      "license": { "type": "CC0", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "Wikimedia Commons",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Voronoi diagram - mathematical cell pattern"
     },
     "book2/circuitboard": {
       "localPath": "assets/book2/circuitboard.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_board,_believed_to_be_part_of_ABNER,_the_NSA%27s_first_digital_computer_designed_in_house,_delivered_1951_-_National_Cryptologic_Museum_-_DSC07665.JPG",
-      "license": { "type": "CC0", "attribution": "National Cryptologic Museum", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "National Cryptologic Museum",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Historic circuit board from NSA's first digital computer (1951)"
     },
     "book2/geodesic": {
       "localPath": "assets/book2/geodesic.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eden_project.JPG",
-      "license": { "type": "Public Domain", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Wikimedia Commons",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Eden Project geodesic dome biomes"
     },
     "book2/lace": {
       "localPath": "assets/book2/lace.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lace_specimen_-_Lacis_Museum_of_Lace_and_Textiles_-_Berkeley,_CA_-_DSC04603.JPG",
-      "license": { "type": "CC0", "attribution": "Lacis Museum of Lace and Textiles", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "Lacis Museum of Lace and Textiles",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Intricate lace textile pattern"
     },
     "book2/weave": {
       "localPath": "assets/book2/weave.jpg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Composite-weave_sandal,_Basket_Maker_II,_Kanab_Canyon,_Utah,_c._500_AD,_yucca_cordage_and_dye_-_Natural_History_Museum_of_Utah_-_DSC07391.JPG",
-      "license": { "type": "CC0", "attribution": "Natural History Museum of Utah", "attributionRequired": false },
+      "license": {
+        "type": "CC0",
+        "attribution": "Natural History Museum of Utah",
+        "attributionRequired": false
+      },
       "source": "wikimedia",
       "note": "Ancient basket weave pattern (c. 500 AD)"
     },
+    "book3/dragon": {
+      "localPath": "assets/book3/dragon.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Uccello_Heiliger_Georg_und_der_Drachen_1_470.jpg",
+      "license": { "type": "Public Domain", "attribution": "Paolo Uccello (1397-1475)", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/stained_glass": {
+      "localPath": "assets/book3/stained_glass.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stained_glass_-_Kutna_Hora.jpg",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/phoenix": {
+      "localPath": "assets/book3/phoenix.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phoenix_detail_from_Aberdeen_Bestiary.jpg",
+      "license": { "type": "Public Domain", "attribution": "Aberdeen Bestiary (12th century)", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/mosaic": {
+      "localPath": "assets/book3/mosaic.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ravenna_BW_4.JPG",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Berthold Werner / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/unicorn": {
+      "localPath": "assets/book3/unicorn.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Verteuil_unicorn.jpg",
+      "license": { "type": "Public Domain", "attribution": "Metropolitan Museum of Art", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/griffin": {
+      "localPath": "assets/book3/griffin.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Griffin_Pisa.JPG",
+      "license": { "type": "Public Domain", "attribution": "Wikimedia Commons", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/sphinx": {
+      "localPath": "assets/book3/sphinx.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Sphinx_of_Giza_-_20080716a.jpg",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Barcex / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/cathedral": {
+      "localPath": "assets/book3/cathedral.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg",
+      "license": { "type": "CC BY-SA 4.0", "attribution": "Zuffe / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/pyramid": {
+      "localPath": "assets/book3/pyramid.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg",
+      "license": { "type": "CC BY-SA 2.5", "attribution": "Nina / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/pagoda": {
+      "localPath": "assets/book3/pagoda.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horyu-ji08s3200.jpg",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "663highland / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/temple": {
+      "localPath": "assets/book3/temple.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg",
+      "license": { "type": "CC BY-SA 2.0", "attribution": "Steve Swayne / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/labyrinth": {
+      "localPath": "assets/book3/labyrinth.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Labyrinth_at_Chartres_Cathedral.JPG",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/leviathan": {
+      "localPath": "assets/book3/leviathan.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Destruction_of_Leviathan.png",
+      "license": { "type": "Public Domain", "attribution": "Gustave Doré (1832-1883)", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/sculpture": {
+      "localPath": "assets/book3/sculpture.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_Fir_JBU005.jpg",
+      "license": { "type": "CC BY-SA 3.0", "attribution": "Jörg Bittner Unna / Wikimedia", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/tapestry": {
+      "localPath": "assets/book3/tapestry.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg",
+      "license": { "type": "Public Domain", "attribution": "Bayeux Tapestry (11th century)", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/mandala": {
+      "localPath": "assets/book3/mandala.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chenrezig_Sand_Mandala.jpg",
+      "license": { "type": "CC BY 2.5", "attribution": "Wikimedia Commons", "attributionRequired": true },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book3/alchemy": {
+      "localPath": "assets/book3/alchemy.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amphitheatrum_sapientiae_aeternae_-_Alchemist%27s_Laboratory.jpg",
+      "license": { "type": "Public Domain", "attribution": "Heinrich Khunrath (1595)", "attributionRequired": false },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book4/joy": {
+      "localPath": "assets/book4/joy.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual representation of JOY for a children's picture book. Bright, vibrant colors with swirling patterns of golden yellows, warm oranges, and radiant pinks." },
+      "downloaded": "2026-01-30"
+    },
+    "book4/laughter": {
+      "localPath": "assets/book4/laughter.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of LAUGHTER" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/wonder": {
+      "localPath": "assets/book4/wonder.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of WONDER" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/curiosity": {
+      "localPath": "assets/book4/curiosity.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of CURIOSITY" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/science": {
+      "localPath": "assets/book4/science.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of SCIENCE" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/magic": {
+      "localPath": "assets/book4/magic.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of MAGIC" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/dream": {
+      "localPath": "assets/book4/dream.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of DREAM" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/story": {
+      "localPath": "assets/book4/story.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of STORY" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/music": {
+      "localPath": "assets/book4/music.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of MUSIC" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/dance": {
+      "localPath": "assets/book4/dance.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of DANCE" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/peace": {
+      "localPath": "assets/book4/peace.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Serene zen garden with raked sand patterns" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/warmth": {
+      "localPath": "assets/book4/warmth.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of WARMTH" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/home": {
+      "localPath": "assets/book4/home.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of HOME" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/family": {
+      "localPath": "assets/book4/family.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of FAMILY" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/love": {
+      "localPath": "assets/book4/love.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of LOVE" },
+      "downloaded": "2026-01-30"
+    },
+    "book4/hope": {
+      "localPath": "assets/book4/hope.png",
+      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.6", "attributionRequired": false },
+      "source": "ai-generated",
+      "generator": { "model": "wan2.6-t2i", "prompt": "Abstract visual of HOPE" },
+      "downloaded": "2026-01-30"
+    },
     "book5/joy": {
       "localPath": "assets/book5/joy.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing pure joy" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing pure joy"
+      }
     },
     "book5/amusement": {
       "localPath": "assets/book5/amusement.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing amusement, laughing" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing amusement, laughing"
+      }
     },
     "book5/wonder": {
       "localPath": "assets/book5/wonder.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing wonder, eyes wide in amazement" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing wonder, eyes wide in amazement"
+      }
     },
     "book5/fascination": {
       "localPath": "assets/book5/fascination.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing fascination, intensely focused" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing fascination, intensely focused"
+      }
     },
     "book5/excitement": {
       "localPath": "assets/book5/excitement.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing excitement, bouncing with energy" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing excitement, bouncing with energy"
+      }
     },
     "book5/gratitude": {
       "localPath": "assets/book5/gratitude.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing gratitude, thankful smile" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing gratitude, thankful smile"
+      }
     },
     "book5/pride": {
       "localPath": "assets/book5/pride.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing pride, confident posture" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing pride, confident posture"
+      }
     },
     "book5/relief": {
       "localPath": "assets/book5/relief.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing relief, tension releasing" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing relief, tension releasing"
+      }
     },
     "book5/tenderness": {
       "localPath": "assets/book5/tenderness.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing tenderness, gentle caring expression" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing tenderness, gentle caring expression"
+      }
     },
     "book5/serenity": {
       "localPath": "assets/book5/serenity.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing serenity, calm and peaceful" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing serenity, calm and peaceful"
+      }
     },
     "book5/sadness": {
       "localPath": "assets/book5/sadness.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing sadness, tears welling" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing sadness, tears welling"
+      }
     },
     "book5/anger": {
       "localPath": "assets/book5/anger.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing anger, furrowed brow" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing anger, furrowed brow"
+      }
     },
     "book5/fear": {
       "localPath": "assets/book5/fear.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing fear, wide frightened eyes" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing fear, wide frightened eyes"
+      }
     },
     "book5/worry": {
       "localPath": "assets/book5/worry.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing worry, anxious concerned expression" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing worry, anxious concerned expression"
+      }
     },
     "book5/confusion": {
       "localPath": "assets/book5/confusion.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing confusion, puzzled frown" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing confusion, puzzled frown"
+      }
     },
     "book5/frustration": {
       "localPath": "assets/book5/frustration.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing frustration, struggling with something" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing frustration, struggling with something"
+      }
     },
     "book5/disappointment": {
       "localPath": "assets/book5/disappointment.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing disappointment, let down expression" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing disappointment, let down expression"
+      }
     },
     "book5/embarrassment": {
       "localPath": "assets/book5/embarrassment.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing embarrassment, blushing and shy" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing embarrassment, blushing and shy"
+      }
     },
     "book5/loneliness": {
       "localPath": "assets/book5/loneliness.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing loneliness, sitting alone" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing loneliness, sitting alone"
+      }
     },
     "book5/nervousness": {
       "localPath": "assets/book5/nervousness.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing nervousness, fidgeting" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing nervousness, fidgeting"
+      }
     },
     "book5/hope": {
       "localPath": "assets/book5/hope.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing hope, looking upward optimistically" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing hope, looking upward optimistically"
+      }
     },
     "book5/awe": {
       "localPath": "assets/book5/awe.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing awe, overwhelmed by beauty" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing awe, overwhelmed by beauty"
+      }
     },
     "book5/affection": {
       "localPath": "assets/book5/affection.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing affection, warm loving smile" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing affection, warm loving smile"
+      }
     },
     "book5/satisfaction": {
       "localPath": "assets/book5/satisfaction.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing satisfaction, content pleased expression" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing satisfaction, content pleased expression"
+      }
     },
     "book5/determination": {
       "localPath": "assets/book5/determination.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing determination, focused serious face" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing determination, focused serious face"
+      }
     },
     "book5/surprise": {
       "localPath": "assets/book5/surprise.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing surprise, eyebrows raised, mouth open" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing surprise, eyebrows raised, mouth open"
+      }
     },
     "book5/disgust": {
       "localPath": "assets/book5/disgust.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing disgust, nose wrinkled in revulsion" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing disgust, nose wrinkled in revulsion"
+      }
     },
     "book5/jealousy": {
       "localPath": "assets/book5/jealousy.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing jealousy, envious sideways glance" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing jealousy, envious sideways glance"
+      }
     },
     "book5/guilt": {
       "localPath": "assets/book5/guilt.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing guilt, looking down ashamed" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing guilt, looking down ashamed"
+      }
     },
     "book5/shame": {
       "localPath": "assets/book5/shame.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing shame, head bowed, wants to hide" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing shame, head bowed, wants to hide"
+      }
     },
     "book5/boredom": {
       "localPath": "assets/book5/boredom.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing boredom, chin on hand, uninterested" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing boredom, chin on hand, uninterested"
+      }
     },
     "book5/anxiety": {
       "localPath": "assets/book5/anxiety.png",
-      "license": { "type": "AI Generated", "attribution": "Generated with Wan2.5", "attributionRequired": false },
+      "license": {
+        "type": "AI Generated",
+        "attribution": "Generated with Wan2.5",
+        "attributionRequired": false
+      },
       "source": "ai-generated",
-      "generator": { "model": "wan2.5-t2i-preview", "prompt": "Child expressing anxiety, wide worried eyes, tense" }
+      "generator": {
+        "model": "wan2.5-t2i-preview",
+        "prompt": "Child expressing anxiety, wide worried eyes, tense"
+      }
+    },
+    "book1/rainbow": {
+      "localPath": "assets/book1/rainbow.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/KSC-08pd2730",
+      "thumbnailUrl": "http://images-assets.nasa.gov/image/KSC-08pd2730/KSC-08pd2730~medium.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/KSC",
+        "attributionRequired": false,
+        "url": "https://www.nasa.gov/multimedia/guidelines/index.html"
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/stars": {
+      "localPath": "assets/book1/stars.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA13125",
+      "thumbnailUrl": "http://images-assets.nasa.gov/image/PIA13125/PIA13125~medium.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL-Caltech",
+        "attributionRequired": false,
+        "url": "https://www.nasa.gov/multimedia/guidelines/index.html"
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/jellyfish": {
+      "localPath": "assets/book1/jellyfish.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jellyfish_from_Corpus_Christi.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Jellyfish_from_Corpus_Christi.jpg/800px-Jellyfish_from_Corpus_Christi.jpg",
+      "license": {
+        "type": "CC0",
+        "attribution": "Wikimedia Commons",
+        "attributionRequired": false,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book1/crystal": {
+      "localPath": "assets/book1/crystal.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA16218",
+      "thumbnailUrl": "http://images-assets.nasa.gov/image/PIA16218/PIA16218~medium.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL-Caltech",
+        "attributionRequired": false,
+        "url": "https://www.nasa.gov/multimedia/guidelines/index.html"
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/sun": {
+      "localPath": "assets/book1/sun.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA03149",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/SDO",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/moon": {
+      "localPath": "assets/book1/moon.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA12235",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/GSFC/Arizona State University",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/ocean": {
+      "localPath": "assets/book1/ocean.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/iss040e090540",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ISS",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book1/peacock": {
+      "localPath": "assets/book1/peacock.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peacock_Plumage.jpg",
+      "license": {
+        "type": "CC BY 2.0",
+        "attribution": "Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book1/babysees": {
+      "localPath": "assets/book1/babysees.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA17563",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ESA/Hubble",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30",
+      "note": "Pillars of Creation - used as title/credits image"
+    },
+    "book1/introduction": {
+      "localPath": "assets/book1/introduction.jpg",
+      "sourceUrl": "https://images.nasa.gov/",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book2/babysees": {
+      "localPath": "assets/book2/babysees.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:NautilusCutawayLogarithmicSpiral.jpg",
+      "license": {
+        "type": "CC BY-SA 3.0",
+        "attribution": "Chris 73 / Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30",
+      "note": "Nautilus shell cross-section - used as title image"
+    },
+    "book2/introduction": {
+      "localPath": "assets/book2/introduction.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mandel_zoom_00_mandelbrot_set.jpg",
+      "license": {
+        "type": "CC BY-SA 3.0",
+        "attribution": "Wolfgang Beyer / Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30",
+      "note": "Mandelbrot set - used as intro image"
+    },
+    "book2/pollen": {
+      "localPath": "assets/book2/pollen.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Misc_pollen.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "Dartmouth College Electron Microscope Facility",
+        "attributionRequired": false
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book2/bacteria": {
+      "localPath": "assets/book2/bacteria.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/niaid/7316101966",
+      "license": {
+        "type": "CC BY 2.0",
+        "attribution": "NIAID",
+        "attributionRequired": true
+      },
+      "source": "niaid",
+      "downloaded": "2026-01-30"
+    },
+    "book2/dna": {
+      "localPath": "assets/book2/dna.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png",
+      "license": {
+        "type": "CC BY-SA 3.0",
+        "attribution": "Zephyris / Wikimedia Commons",
+        "attributionRequired": true
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
+    },
+    "book2/saturn": {
+      "localPath": "assets/book2/saturn.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA11141",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/JPL/SSI",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book2/jupiter": {
+      "localPath": "assets/book2/jupiter.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA02873",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/Johns Hopkins APL",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book2/galaxy": {
+      "localPath": "assets/book2/galaxy.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA15416",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ESA/Hubble",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book2/nebula": {
+      "localPath": "assets/book2/nebula.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA17563",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ESA/Hubble",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30",
+      "note": "Pillars of Creation"
+    },
+    "book2/cosmos": {
+      "localPath": "assets/book2/cosmos.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/PIA04204",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/ESA/STScI",
+        "attributionRequired": false
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30",
+      "note": "Hubble Deep Field"
+    },
+    "book2/spiral": {
+      "localPath": "assets/book2/spiral.jpg",
+      "sourceUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001262",
+      "thumbnailUrl": "http://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001262/GSFC_20171208_Archive_e001262~medium.jpg",
+      "license": {
+        "type": "Public Domain",
+        "attribution": "NASA/Hubble",
+        "attributionRequired": false,
+        "url": "https://www.nasa.gov/multimedia/guidelines/index.html"
+      },
+      "source": "nasa",
+      "downloaded": "2026-01-30"
+    },
+    "book2/stripes": {
+      "localPath": "assets/book2/stripes.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zebra-stripes-black-and-white-zoo-39245.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Zebra-stripes-black-and-white-zoo-39245.jpg/800px-Zebra-stripes-black-and-white-zoo-39245.jpg",
+      "license": {
+        "type": "CC0",
+        "attribution": "Pixabay / Wikimedia Commons",
+        "attributionRequired": false,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "source": "wikimedia",
+      "downloaded": "2026-01-30"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "bookId": "book3",
+  "bookTitle": "What We Dream",
+  "bookIntro": "Stories We Tell",
+  "bookDesc": "Across all cultures and centuries, humans have dreamed of dragons and heroes, built temples that touch the sky, and created art that captures the soul. These are the stories we have always told.",
+  "htmlTitle": "BabySees - What We Dream",
+  "htmlDescription": "Book 3: What We Dream. Mythology, fantasy, and art.",
+  "credits": "Images: Wikimedia Commons, Public Domain",
+  "pages": [
+    { "word": "BabySees", "image": "assets/book3/dragon.jpg", "category": "Title", "isTitle": true },
+    { "word": "Introduction", "image": "assets/book3/stained_glass.jpg", "category": "Introduction", "isIntro": true },
+    { "word": "Phoenix", "image": "assets/book3/phoenix.jpg", "category": "Bright" },
+    { "word": "Stained Glass", "image": "assets/book3/stained_glass.jpg", "category": "Bright" },
+    { "word": "Mosaic", "image": "assets/book3/mosaic.jpg", "category": "Bright" },
+    { "word": "Unicorn", "image": "assets/book3/unicorn.jpg", "category": "Bright" },
+    { "word": "Griffin", "image": "assets/book3/griffin.jpg", "category": "Bright" },
+    { "word": "Sphinx", "image": "assets/book3/sphinx.jpg", "category": "Cool" },
+    { "word": "Cathedral", "image": "assets/book3/cathedral.jpg", "category": "Cool" },
+    { "word": "Pyramid", "image": "assets/book3/pyramid.jpg", "category": "Cool" },
+    { "word": "Pagoda", "image": "assets/book3/pagoda.jpg", "category": "Cool" },
+    { "word": "Temple", "image": "assets/book3/temple.jpg", "category": "Cool" },
+    { "word": "Labyrinth", "image": "assets/book3/labyrinth.jpg", "category": "Cool" },
+    { "word": "Leviathan", "image": "assets/book3/leviathan.png", "category": "Cool" },
+    { "word": "Dragon", "image": "assets/book3/dragon.jpg", "category": "Warm" },
+    { "word": "Sculpture", "image": "assets/book3/sculpture.jpg", "category": "Warm" },
+    { "word": "Tapestry", "image": "assets/book3/tapestry.jpg", "category": "Warm" },
+    { "word": "Mandala", "image": "assets/book3/mandala.jpg", "category": "Warm" },
+    { "word": "Alchemy", "image": "assets/book3/alchemy.jpg", "category": "Warm" },
+    { "word": "Credits", "image": "assets/book3/dragon.jpg", "category": "Credits", "isCredits": true }
+  ]
+}
